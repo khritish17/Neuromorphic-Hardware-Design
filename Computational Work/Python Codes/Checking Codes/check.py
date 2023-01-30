@@ -1,0 +1,56 @@
+'''
+    This program checks how many bit flips requires to change a character 
+    to another, ex. A -> H
+'''
+'''
+    To change the bit tollerance, edit in line 37
+    Bit tolerance: How many bit flips will change a character to another 
+'''
+import numpy as np
+import pandas as pd 
+
+
+def bit_flip(vecA,vecB):
+    bit_flips=0
+    for i in range(len(vecA)):
+        if not vecA[i]==vecB[i]:
+            bit_flips+=1
+    return bit_flips
+
+
+def check_letters():
+    # First import all the datas into a dictionary
+    # check with each alphabet
+    # produce those are more similar to each other
+    data=pd.read_csv('train.csv')
+    letter_arr=np.ndarray((26,35))
+    # print(data['x1'][25])
+    # print(data['Label'][0])
+    for i in range(26):
+        arr=[]
+        for j in range(1,36):
+            arr.append(data['x{}'.format(j)][i])
+        letter_arr[i]=arr
+    
+    # Now check for 
+    # print(letter_arr[0])
+    character=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    bit_tolerance=5                            # Fliping this amount of bits will change one character to another
+    similar_character={}
+    for i in range(26):
+        char_arr=[]
+        for j in range(i+1,26):
+            vecA=letter_arr[i]
+            vecB=letter_arr[j]
+            bit_change=bit_flip(vecA,vecB)
+            # bit_change=cosine_similarity(vecA, vecB)
+            if bit_change==bit_tolerance:
+                char_arr.append(character[j])
+        similar_character[character[i]]=char_arr
+    print(similar_character)
+    output=open('similar_character.txt','w')
+    for key,value in similar_character.items():
+        output.write("{}:{}\n".format(key,value))
+    output.close
+
+check_letters()

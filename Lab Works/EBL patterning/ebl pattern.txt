@@ -1,0 +1,7 @@
+Objective:
+We need to fabricate single domain magnets for both in-plane and perpendicular anisotropy
+
+i. The in-plane and the perpendicular will be done in different wafers.
+ii. contact pad 
+
+ 

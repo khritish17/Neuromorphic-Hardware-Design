@@ -1,0 +1,58 @@
+\BOOKMARK [0][-]{section*.1}{Front Page}{}% 1
+\BOOKMARK [0][-]{section*.2}{Contents}{}% 2
+\BOOKMARK [0][-]{section*.3}{List of Figures}{}% 3
+\BOOKMARK [0][-]{section*.4}{List of Tables}{}% 4
+\BOOKMARK [0][-]{section*.5}{Abstract}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
+\BOOKMARK [1][-]{section.1.1}{Artifical Neural Network \(ANN\)}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.1.1}{Architecture}{section.1.1}% 8
+\BOOKMARK [2][-]{subsection.1.1.2}{Activation Function}{section.1.1}% 9
+\BOOKMARK [2][-]{subsection.1.1.3}{Forward Propagation}{section.1.1}% 10
+\BOOKMARK [2][-]{subsection.1.1.4}{Gradient Descent}{section.1.1}% 11
+\BOOKMARK [2][-]{subsection.1.1.5}{Backpropagation}{section.1.1}% 12
+\BOOKMARK [1][-]{section.1.2}{Character Recognition Model}{chapter.1}% 13
+\BOOKMARK [2][-]{subsection.1.2.1}{Neural Architecture}{section.1.2}% 14
+\BOOKMARK [1][-]{section.1.3}{Neural Network using Spintronics}{chapter.1}% 15
+\BOOKMARK [2][-]{subsection.1.3.1}{Magnetic Anisotropy}{section.1.3}% 16
+\BOOKMARK [2][-]{subsection.1.3.2}{Magnetic Field along in-plane: Easy and Hard axis}{section.1.3}% 17
+\BOOKMARK [2][-]{subsection.1.3.3}{Perpendicular Anisotropy}{section.1.3}% 18
+\BOOKMARK [2][-]{subsection.1.3.4}{Magnetostriction}{section.1.3}% 19
+\BOOKMARK [2][-]{subsection.1.3.5}{Multiferroics and Multiferroic Composites}{section.1.3}% 20
+\BOOKMARK [2][-]{subsection.1.3.6}{Giant Magneto Resistance \(GMR\)}{section.1.3}% 21
+\BOOKMARK [2][-]{subsection.1.3.7}{Tunneling Magneto Resistance \(TMR\)}{section.1.3}% 22
+\BOOKMARK [1][-]{section.1.4}{Magnetic Thermal Annealing}{chapter.1}% 23
+\BOOKMARK [1][-]{section.1.5}{Ferro-magnteic Resonance \(FMR\)}{chapter.1}% 24
+\BOOKMARK [1][-]{section.1.6}{Magnetic Force Microscopy \(MFM\)}{chapter.1}% 25
+\BOOKMARK [1][-]{section.1.7}{Piezo Force Microscopy \(PFM\)}{chapter.1}% 26
+\BOOKMARK [1][-]{section.1.8}{Vibrating Sample Magnetometer \(VSM\)}{chapter.1}% 27
+\BOOKMARK [1][-]{section.1.9}{X-ray Diffraction \(XRD\)}{chapter.1}% 28
+\BOOKMARK [1][-]{section.1.10}{X-ray Reflectivity \(XRR\)}{chapter.1}% 29
+\BOOKMARK [1][-]{section.1.11}{Strain-gauge}{chapter.1}% 30
+\BOOKMARK [1][-]{section.1.12}{Stress-strain Testing Machine}{chapter.1}% 31
+\BOOKMARK [1][-]{section.1.13}{Proposed Device}{chapter.1}% 32
+\BOOKMARK [1][-]{section.1.14}{Experimental Apparatus}{chapter.1}% 33
+\BOOKMARK [2][-]{subsection.1.14.1}{Spin Coater}{section.1.14}% 34
+\BOOKMARK [2][-]{subsection.1.14.2}{Shaker}{section.1.14}% 35
+\BOOKMARK [2][-]{subsection.1.14.3}{Hot Plate}{section.1.14}% 36
+\BOOKMARK [2][-]{subsection.1.14.4}{Ultrasonic Cleaner}{section.1.14}% 37
+\BOOKMARK [2][-]{subsection.1.14.5}{Hot Air Oven}{section.1.14}% 38
+\BOOKMARK [2][-]{subsection.1.14.6}{Rota Mantle}{section.1.14}% 39
+\BOOKMARK [2][-]{subsection.1.14.7}{Nitrogrn Gun}{section.1.14}% 40
+\BOOKMARK [2][-]{subsection.1.14.8}{Vacuum Desiccator}{section.1.14}% 41
+\BOOKMARK [2][-]{subsection.1.14.9}{Muffle Furnace}{section.1.14}% 42
+\BOOKMARK [2][-]{subsection.1.14.10}{Fume Hood}{section.1.14}% 43
+\BOOKMARK [2][-]{subsection.1.14.11}{Source Measuring Unit \(SMU\)}{section.1.14}% 44
+\BOOKMARK [2][-]{subsection.1.14.12}{Power Supply}{section.1.14}% 45
+\BOOKMARK [2][-]{subsection.1.14.13}{Probe Station}{section.1.14}% 46
+\BOOKMARK [2][-]{subsection.1.14.14}{Oscilloscope}{section.1.14}% 47
+\BOOKMARK [1][-]{section.1.15}{LabView measurement automation}{chapter.1}% 48
+\BOOKMARK [1][-]{section.1.16}{Outline of the remaining chapters}{chapter.1}% 49
+\BOOKMARK [0][-]{chapter.2}{Results}{}% 50
+\BOOKMARK [1][-]{section.2.1}{Character Recognition Evaluation}{chapter.2}% 51
+\BOOKMARK [1][-]{section.2.2}{Experimental results after Magnetic Thermal Annealing}{chapter.2}% 52
+\BOOKMARK [0][-]{chapter.3}{Future Works}{}% 53
+\BOOKMARK [1][-]{section.3.1}{Piezoelectrics}{chapter.3}% 54
+\BOOKMARK [1][-]{section.3.2}{Electron Beam Lithography}{chapter.3}% 55
+\BOOKMARK [1][-]{section.3.3}{Block Co-Polymer Lithography}{chapter.3}% 56
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 57
+\BOOKMARK [0][-]{section*.7}{Vita}{}% 58

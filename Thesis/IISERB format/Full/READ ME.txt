@@ -1,0 +1,7 @@
+1. Acknowledgement page is edited
+2. MFM figure is added
+3. VSM figure is added
+4. XRR section is added
+5. XRD section is commented
+6. LabVIEW development section under each picyure few line are written about it
+7. Sputtering deposition pictures (made in excel) are added  

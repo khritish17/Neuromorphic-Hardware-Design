@@ -1,0 +1,4 @@
+If the CCPS gaussmeter does not work, use our gaussmeter and gaussprobe
+
+Issues with EM:
+Software:, sometimes it shows -2500mT even the actual raeding is different

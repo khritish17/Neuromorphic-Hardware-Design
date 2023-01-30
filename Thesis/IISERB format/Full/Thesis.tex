@@ -1,0 +1,1425 @@
+\documentclass[12pt,a4paper,bold]{thesis}
+
+% ------------------------------
+% Information on how to use this file
+% ------------------------------
+%
+% This file was prepared under the MikTex distribution <http://miktex.org/>
+% All packages such as "thesis", "amsmath", "graphicx", "epstopdf", etc. are available on <http://ctan.org/>.
+% Most Latex editors (such as WinEdt/TexMaker/Texniccenter) will download these for you as you try to compile this file.
+% Please change the Individual Details below before you compile.
+% The following pages are optional. You can comment out the corresponding lines before compiling :
+% - List of Symbols
+% - Appendix
+%
+% Note: Often, you will have to compile the file twice to see the changes correctly. This is because of the way the \tableofcontents command works.
+%
+% In case of any questions, please contact Dr. Prahlad Vaidyanathan <prahlad@iiserb.ac.in>
+
+% ------------------------------
+% Preamble
+% ------------------------------
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks,
+                        citecolor=blue,
+                        filecolor=blue,
+                        linkcolor=blue,
+                        urlcolor=blue}
+
+                        
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+\usepackage[toc, page]{appendix}
+
+\theoremstyle{thm}
+\newtheorem{thm}{Theorem}[chapter]
+\theoremstyle{definition}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+
+\providecommand{\appendixname}{Appendices}
+%\newcommand{\appendixtocname}{Appendices}
+%\newcommand{\appendixpagename}{Appendices}
+
+\newcommand{\head}[1]{\newpage
+\vspace{3em}
+\begin{center}
+\LARGE{\MakeUppercase{\textbf{#1}}}
+\end{center}
+\vspace{3em}
+\addcontentsline{toc}{chapter}{#1}
+}
+\renewcommand{\listfigurename}{}
+% ------------------------------
+% Individual details (Change these!)
+% ------------------------------
+
+\newcommand{\thesistitle}{Neuromorphic hardware design}
+\newcommand{\studentname}{Khritish Kumar Behera}
+\newcommand{\studentrollno}{17125}
+\newcommand{\advisorname}{Dr. Kuntal Roy}
+
+\newcommand{\degreename}{BS-MS}
+\newcommand{\subject}{Electrical Engineering and Computer Science}
+\newcommand{\thesisdate}{April 2022}
+
+% ------------------------------
+% Title page
+% ------------------------------
+
+\def\maketitle{
+\begin{titlepage}
+\begin{center}
+\begin{doublespace}
+\textbf{\MakeUppercase{\LARGE{\thesistitle}}} \\
+%\ \\
+\ \\
+\normalsize{\textbf{A THESIS}} \\
+\normalsize{\textit{submitted in partial fulfillment of the requirements}} \\
+\normalsize{\textit{for the award of the dual degree of}} \\
+%\ \\
+%\ \\
+\large{\textbf{Bachelor of Science-Master of Science}} \\
+\normalsize{\textit{in}} \\
+\large{\textbf{\MakeUppercase{\subject}}} \\
+\normalsize{\textit{by}} \\
+\large{\textbf{\MakeUppercase{\studentname}}} \\
+\normalsize{\textbf{(\studentrollno)}} \\
+% \normalsize{\textit{Under the guidance of}} \\
+% \large{\textbf{\MakeUppercase{\advisorname}}}
+\end{doublespace}
+\vfill
+\centerline{\includegraphics[scale=0.20]{iiser_b.png}}
+\ \\ 
+\textbf{DEPARTMENT OF \MakeUppercase{\subject} \\ 
+INDIAN INSTITUTE OF SCIENCE EDUCATION AND RESEARCH BHOPAL\\ %Flows onto two lines
+BHOPAL - 462066} \\ 
+\ \\
+\textbf{\thesisdate}
+\end{center}
+\end{titlepage}
+}
+
+% ------------------------------
+\begin{document}
+\maketitle
+
+\pagenumbering{roman}
+
+% ------------------------------
+\begin{figure}
+\includegraphics[width=\textwidth]{Images/iiser_head.png}
+%\centering
+\end{figure}
+\phantomsection
+\head{Certificate}
+This is to certify that {\bf \studentname}, BS-MS (\subject), has worked on the project entitled {\bf `\thesistitle'} under my supervision and guidance. The content of this report is original and has not been submitted elsewhere for the award of any academic or professional degree.
+
+\vspace{10em}
+
+\textbf{\thesisdate \hfill \advisorname \\ IISER Bhopal}
+
+\vfill
+
+%\begin{center}
+%\begin{tabular}{ccc}
+%\textbf{Committee Member} & \textbf{Signature} & \textbf{Date} \\
+%\\
+%\rule{15em}{0.4pt} & \rule{10em}{0.4pt} & \rule{6em}{0.4pt} \\
+%\\
+%\rule{15em}{0.4pt} & \rule{10em}{0.4pt} & \rule{6em}{0.4pt} \\
+%\\
+%\rule{15em}{0.4pt} & \rule{10em}{0.4pt} & \rule{6em}{0.4pt} \\
+%\end{tabular}
+%\end{center}
+
+\begin{center}
+\begin{tabular}{ccc}
+\textbf{Committee Member} & \textbf{Signature} & \textbf{Date} \\
+\\
+Dr. Aditya Shankar Medury & \rule{10em}{0.4pt} & 02/05/2022 \\
+\\
+Dr. Mitradip Bhattacharjee & \rule{10em}{0.4pt} & 02/05/2022 \\
+\\
+Dr. Pydi Ganga Mamba Bahubalindruni & \rule{10em}{0.4pt} & 02/05/2022 \\
+\end{tabular}
+\end{center}
+
+% ------------------------------
+\phantomsection
+\head{Academic Integrity and Copyright Disclaimer}
+
+I hereby declare that this project is my own work and, to the best of my knowledge, it contains no materials previously published or written by another
+person, or substantial proportions of material which have been accepted for the award of any other degree or diploma at IISER Bhopal or any other educational
+institution, except where due acknowledgement is made in the document. \\
+
+I certify that all copyrighted material incorporated into this document is in compliance with the Indian Copyright Act (1957) and that I have received written permission from the copyright owners for my use of their work, which is beyond the scope of the law. I agree to indemnify and save harmless IISER Bhopal from any and all claims that may be asserted or that may arise from any copyright violation.
+
+\vfill
+
+\textbf{\thesisdate \hfill \studentname \\ IISER Bhopal}
+
+% ------------------------------
+\phantomsection
+\head{Acknowledgement}
+
+I would like to express my warmest thanks to my advisor Dr. Kuntal Roy for allowing me to work on this project. His advice and guidance carried me through all the stages of this project.\\\\ 
+I would also like to thank Mohanlal Naik for taking time out of his busy schedule and providing me with valuable insights. I thank my colleagues Keshav Bihani, Nitanshu Bhagawat Kate, and Lakhvir Singh for their vital aid and discussions. I want to thank the IISER Bhopal community for providing a lively atmosphere full of enthusiasm for Science. \\
+Finally, I would like to thank my mother, grandfather, and the whole family for the support and moral guidance that kept me motivated to pursue my dreams. 
+
+\vspace{7em}
+
+\begin{flushright}
+    {\bf \studentname}
+\end{flushright}
+
+% ------------------------------
+\phantomsection
+%\addcontentsline{toc}{chapter}{Abstract}
+\head{Abstract} 
+\indent \indent \indent We have gone far faster in terms of computation than our human brain. However, biological systems have distinct capabilities like recognizing faces from the crowd, even when wearing a mask. Biological systems require very little power to operate. The ultimate solution for low-power brain-inspired computing is to replicate the brain's neural architecture on a chip.\\
+\indent \indent This project implements a character recognition system using a back-propagation neural network algorithm, whose neural architecture can be processed onto the hardware. The neuron will be made up of multiferroics exploiting its novel spintronic device concepts. As multiferroics have the in-built functionality of weight, sum, and threshold function, they can be harnessed to mimic the processing of a biological neuron. For magnetic characterization, vibrating sample magnetometer is used. For better magnetic characterization and stabilization of the sample, magnetic thermal annealing was used. LabVIEW automation of different instruments such as signal generator, spectrum analyzer, electromagnet, and lock-in amplifier was developed in view of synchronizing and data acquisition. This LabVIEW automation was used to develop a ferromagnetic resonance system in the lab.\\
+\indent \indent We have designed the architecture of neuromorphic hardware, which mimics the human brain's neural architecture. In 2007, Albert Fert and Peter Gr{\"u}nberg were jointly awarded the Nobel Prize in Physics for discovering giant magnetoresistance (GMR). The tunneling magnetoresistance uses an insulator instead of a metallic spacer, which boosts the magnetoresistance more than GMR. The input to the neuron will be given at the piezoelectric layer of the multiferroic composite, and the output from the neuron will come from the tunneling magnetoresistance. Finally, all the neurons will be connected such that the output of one neuron is connected as the input to another neuron. 
+%These interconnections of the neuron will be done through multi-levels lithography
+ 
+% ------------------------------
+\phantomsection
+\head{List of Symbols or Abbreviations}
+
+\begin{center}
+\begin{tabular}{l@{\hspace{7em}}l@{}} \smallskip
+	$\alpha$ & Damping parameter \\ \smallskip
+	$\gamma$ & Gyromagnetic ratio \\ \smallskip
+	$\omega$ & Angular frequency \\ \smallskip
+	$\Omega$ & Volume \\ \smallskip
+	$\epsilon$ & Strain \\ \smallskip
+	$\sigma$ & Stress \\ \smallskip
+	$LR$ & Learning rate \\ \smallskip
+	$M$ & Magnetization \\ \smallskip
+	$M_s$ & Saturation magnetization \\ \smallskip
+	$\lambda$ & Magnetostriction coefficient \\ \smallskip
+	$H_k$ & Coercive field \\ \smallskip
+	$\alpha_{ME}$ & Magneto-electric coupling \\ \smallskip
+	$R$ & Resistance \\ \smallskip
+	$G$ & Conductance \\ \smallskip
+	$Z$ & Characteristic impedance \\ \smallskip
+	$T$ & Transmission coefficient \\ \smallskip
+	$Y$ & Young's modulus \\ \smallskip
+	$d_{pieze}$ & Dielectric coefficient of piezoelectric \\ \smallskip
+	$t_{pieze}$ & thickness of piezoelectric layer \\ \smallskip
+\end{tabular}
+\end{center}
+
+% ------------------------------
+%\head{List of Figures}
+%%\begin{center}
+%%\begin{tabular}{l@{\hspace{7em}}l@{}} \smallskip
+%%	Not a function & 2 \\ \smallskip
+%%\end{tabular}
+%%\end{center}
+%%\clearpage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
+%\listoffigures
+\phantomsection
+\let\LaTeXStandardClearpage\clearpage
+
+\let\clearpage\relax
+\head{List of Figures}
+\listoffigures
+\let\clearpage\LaTeXStandardClearpage
+
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
+%\listoffigures
+%\cleardoublepage
+
+% ------------------------------
+%\head{List of Tables}
+%\begin{center}
+%\begin{tabular}{l@{\hspace{7em}}r@{}} \smallskip
+%	Nonlinear Model Results & 5 \\ \smallskip
+%\end{tabular}
+%\end{center}
+%\phantomsection
+%\let\LaTeXStandardClearpage\clearpage
+%\let\clearpage\relax
+%\head{List of Tables}
+%\listoftables
+%\let\clearpage\LaTeXStandardClearpage
+
+
+\tableofcontents
+
+% ------------------------------
+\chapter{Introduction} \label{ch: introduction}
+\pagenumbering{arabic}
+
+% ------------------------------
+%\section{Basic Introduction}
+Spin-electronics or so-called spintronics, is a rapidly developing nanotechnology. Spintronic
+devices can be used to store, process, and communicate information. They also possess in-built functionalities for performing specific tasks efficiently. Spintronic devices can be more energy-efficient than the transistor-based devices since there is no charge movement causing Ohmic dissipation.\\ 
+\indent \indent In 2007, Albert Fert and Peter Gr{\"u}nberg were jointly awarded the Nobel Prize in Physics for discovering giant magnetoresistance (GMR)~\cite{baibich1988giant, binasch1989enhanced} back in the 1980s, signifying its remarkable transition from fundamental studies to a critical device technology. For the tunneling magnetoresistance (TMR), instead of a metallic spacer as used in GMR, an insulator is used, which boosts the magnetoresistance more than GMR. Here, we will utilize TMR for sensing the magnetization direction.\\
+\indent \indent Brain-inspired neuromorphic computing is intended to mimic our brains' working principles ~\cite{poon2011neuromorphic,yon1958computer}. The biological neural network is a dense network of interconnected neurons which allows them to compute in parallel. An artificial neural network (ANN) models our brains’ neural architecture. ANN is composed of neurons, which perform two primary tasks: Summation of the weighted inputs and applying the activation function on the summed input depicting the firing of a neuron. In the training phase, ANN is trained to get the optimizing parameters of weights and bias. We expect the ANN to perform the desired task with unknown inputs in the evaluation phase. The target is to build such neuromorphic chips using the novel spintronic device concepts.\\
+\indent \indent LabVIEW will be used for automation of various instruments for setting up the ferromagnetic resonance setup~\cite{ni}. It is a graphical programming environment designed for automation, testing and validation. It will be used as a centralized system for data acquisition and synchronization of different instruments from different vendors. 
+   
+% -----------------------------
+\section{Artifical Neural Networks}
+ \indent \indent An artificial neural network (ANN) is a collection of interconnected neurons represented as nodes, similar to the biological neural network~\cite{hinton2015deep}. Mimicking its biological counterpart, the artificial neuron accepts input(s) from other connected neurons through an edge. Each edge has a strength associated with it known as \textit{weight}, w. The \textit{weight} and \textit{bias} are the two optimizing parameters of a neural network.\\
+\indent \indent Each neuron processes through a series of sequential steps, which are represented as \textit{Summation step} and \textit{Activation step}.
+The summation step performs the summation of the weighted input and the bias term.
+%\[\text{Summation block output}=\Sigma_nX_nW_n + b\]
+The output from the summation step is fed into the activation step. The output of the activation step is the final output of the neuron.\\
+\indent \indent The working procedure of a neural network is a two-phase process: \textit{training}, and \textit{evaluation}. The neural network (NN) is trained on training data during the training phase. Training data is a tuple $(X, T)$, where X is the input and T is the desired output or target. The training data is fed into the NN, and the model learns the underlying feature of the data and optimizes its weight and biases to obtain a minimum error. Then comes the evaluation phase, where the trained NN with optimized weight and bias is used to obtain the output for those inputs for which the network was never trained for~\cite{hinton2015deep}.
+
+%\begin{figure}[H]
+%	\centering
+%   \includegraphics[height=4cm]{Images/30.png} 
+%   \caption{Comparison between biological neuron and artificial neuron.}
+%\end{figure}
+\pagebreak
+\subsection{Architecture}
+\indent \indent In an ANN, all the neurons are connected in a specific architecture, the neural architecture. Fig. 1.1 depicts a simple ANN architecture.
+The architecture can be viewed as three-layered:\textbf{Input layer}, \textbf{Hidden layers}, and the \textbf{Output layer}.\\
+\indent \textbf{Input Layer:}
+This layer is the input interface between the neural network and the user. The nodes in this layer receive input from the user and send it to its subsequent layers. The nodes in the input layer do not have the bias term. The number of nodes in this layer is dictated by the problem. \\
+\indent \textbf{Output Layer:}
+This layer is the output interface between the neural network and the user. The nodes in this layer provide the final output to the user. The number of nodes in this layer is dictated by the problem at put.\\
+\indent \textbf{Hidden Layers:}
+The hidden layer can be more than one layer. This layer resides between the \textbf{Input layer} and the \textbf{Output layer}. The majority of the computation in an ANN occurs in this layer.  
+Since the users do not interact with this layer, it is termed the hidden layer.\\\\
+Following are the rules on how a node is connected to another node\\
+$\blacksquare$ A node in a layer should not be connected to another node of the same layer.\\
+$\blacksquare$ Any node should not have self-loop.\\
+$\blacksquare$ A node should be connected to all other nodes in the next layer.\\
+$\blacksquare$ A node in any layer should not connect to an another node from the previous layer\\
+%\begin{itemize}
+%	\item No node should be connected to another node in the same layer
+%	\item There should be no self-loop
+%	\item A node should be connected to all other nodes in the next layer
+%	\item No node should connect to another node from the previous layer
+%\end{itemize}
+
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=3.1cm]{Images/35.png} 
+   \caption{An ANN with one neuron in input layer, two neurons in the hidden layer, and two neurons in the output layer.}
+\end{figure}
+
+\subsection{Activation function}
+\indent\indent\indent The activation function is a non-linear mathematical function. It is the only non-linear component in the whole network. The activation function reflects the activation of a biological neuron in a biological neural network. A biological neuron activates or fires only when the input received reaches a certain threshold. This threshold is the biological counterpart of the bias term in an artificial neuron. The most simplistic activation function is a \textit{step} function.\\
+\textbf{Step function}
+\[
+\text{step}(x)=
+\begin{cases}
+	1 & \text{if } x>0\\
+	0 & \text{if } x\leq0
+\end{cases}
+\]
+\indent\indent In general, a smoother version of the step function is used as an activation function known as the \textit{sigmod} function.\\
+\textbf{Sigmoid function}
+\[\text{sigmoid}(x)=\frac{1}{1+e^{-x}}\]
+\indent\indent In \textit{deep} neural networks, the number of neurons will be in the millions. Using the sigmoid activation function will be computationally expensive for a larger number of neurons. Hence a computationally inexpensive activation function is deployed known as the Rectilinear Unit function (Relu).\\
+\textbf{Rectilinear Unit function (ReLu)}
+\[
+\text{ReLu}(x)=
+\begin{cases}
+	x & \text{if } x>0\\
+	0 & \text{if } x\leq0
+\end{cases}
+\]
+\pagebreak
+\subsection{Forward propagation}
+\indent\indent In forward-propagation, we need to set our neural architecture, after which the input traverses from the input layer to the output layer through the hidden layers. The weight and bias terms have already been configured. In Fig. 1.2 we have taken a very simple ANN with one neuron in the input layer, one in the output layer, and one hidden layer, which consists of one neuron. With weights, $W_1$ and $W_2$, for edges connecting \textbf{Node 1} with \textbf{Node 2} and \textbf{Node 2} with \textbf{Node 3} respectively. $X$ is the input given to the NN, and $Y$ is the output received from the NN. \textbf{Node 2} and \textbf{Node 3} have the bias term \textbf{$B_2$} and \textbf{$B_3$} respectively. The following figure describes the neural architecture.
+
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=1.5cm]{Images/34.png} 
+   \caption{A simple neural network to depict forward propagation.}
+\end{figure}
+
+\indent Generally, the input node does not have any bias term, it's just a simple node, which accepts input and sends it to its subsequent connected node.\\ 
+\textbf{Forward propagation steps:}\\
+$\blacksquare$ Input $X$ is provided at the input node, \textbf{Node 1}\\
+$\blacksquare$ Node 1 simply transmits the input to the next node, \textbf{Node 2} through the edge with weight $W_1$\\
+$\blacksquare$ Input received at node 2 is $Z_1 = X\cdot W_1$\\
+$\blacksquare$ Node 2 process the input $Z_1$ and produces the output $Z_2=\sigma(Z_1+b_2)$, where $b_2$ is the bias term of node 2 and $\sigma$ is the activation function\\
+$\blacksquare$ $Z_2$ is transmitted to \textbf{Node 3} via the edge with weight $W_2$\\
+$\blacksquare$ Input received at Node 3 is $Z_3$, $Z_3=Z_2 \cdot W_2$\\
+$\blacksquare$ Node 3 process the input $Z_3$, and produces the final output of the neural network $Y$, $Y=\sigma(Z_3 + b_3)$\\
+%\begin{itemize}
+%	\item Input $X$ is provided at the input node, \textbf{Node 1}
+%	\item Node 1 simply transmits the input to the next node, \textbf{Node 2} through the edge with weight $W_1$ 
+%	\item Input received by node 2 is $Z_1 = X\cdot W_1$ 
+%	\item Node 2 process the input $Z_1$ and produces the output $Z_2=\sigma(Z_1+b_2)$, where $b_2$ is the bias term of node 2 and $\sigma$ is the activation function
+%	\item $Z_2$ is transmitted to \textbf{Node 3} via the edge with weight $W_2$
+%	\item Input received at Node 3 is $Z_3$, $Z_3=Z_2 \cdot W_2$
+%	\item Node 3 process the input $Z_3$, and produces the final output of the neural network $Y$, $Y=\sigma(Z_3 + b_3)$
+%\end{itemize}
+\[Y=\sigma(Z_3 + b_3)=\sigma(Z_2 \cdot W_2 + b_3)=\sigma(\sigma(Z_1+b_2) \cdot W_2 + b_3)\]
+\[Y=\sigma(\sigma(X\cdot W_1+b_2) \cdot W_2 + b_3)\]
+%Output from node 1, X
+\subsection{Gradient descent}
+\indent\indent Gradient descent is an approach by which the neural network trains itself by minimizing the \textit{error} on changing the weights and biases accordingly.
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/66.png} 
+   \caption{Step size is larger when far away from minima and small step size when close to the minima.}
+\end{figure}
+\indent In the Figure 1.3, we have plotted \textbf{error} on the y-axis for different values of an \textbf{optimizing parameter, K}. The optimizing parameter can be any weight or any bias term in the neural network. The aim is to choose a value for K such that the error is minimum. \\
+\indent To begin with, the initial value of K is chosen randomly. The input is traversed through the neural network using the forward propagation method, from which the error is calculated. The slope at that point is computed, suggesting whether to increase or decrease the value of K to minimize the error and the rate at which the minimum error point should be reached. The magnitude of the slope is usually high; hence a \textit{learning rate, LR} factor is multiplied by the slope. The LR is usually chosen small but not too small. By multiplying the LR with the slope, the step size is computed, which dictates how much large or small jump K should take.
+The step size ensures that when K is far away from the minimum, it takes larger step size, and when K is near to a minimum, it takes smaller step size, in order to avoid overshooting. 
+\[\text{Step size} = LR \cdot slope\]
+The new value of K is calculated as
+\[K_{new}=K - \text{Step size}\]  
+\[K_{new}=K - LR \cdot slope\]
+\[K_{new}=K - LR \cdot \frac{\partial Error}{\partial K}\]
+\indent The initial value of K is chosen randomly for the gradient descent process; the reason for doing so is if the Error vs. K plot turns out to have a lot of local minima. Moreover, if we always start from a fixed point, there is a heavy chance it will always be at a local minimum. However, if it is chosen randomly, this increases the probability of not getting stuck in local minima. This certainly does not guarantee that it would not be stuck in local minima, but it increases the chance of not getting stuck in one.
+
+
+\subsection{Backpropagation}
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/38.png} 
+   \caption{A simple neural network to depict backpropagation.}
+\end{figure}
+
+\indent\indent In forward propagation, it was assumed that all the weights and biases are already optimized. Backpropagation is the process by which the weights and biases are optimized. Backpropagation uses a gradient descent approach on every weight and bias term of the neural network. Since back-propagation is part of the training phase, it is performed on the training data $(X, T)$, where $X$ is the input and $T$ is the desired output or target. 
+Fig. 1.4 uses the same simplistic neural network is chosen in the forward propagation. For input $X$, if $Y$ is the output received for unoptimized weights. Here bias terms are not considered for simplicity. 
+The error is calculated as follows. 
+\[\text{Error} = (T - Y)^2\]
+For optimizing the weight $W_1$, gradient-descent approach is used.
+\[W_1=W_1-LR \cdot \frac{\partial Error}{\partial W_1}\]
+Y is calculated as 
+\[\text{Y}=\sigma(Z_2 \cdot W_2)=\sigma(\sigma(X \cdot W_1)\cdot W_2)\]
+From gradient-descent approach,
+\[\frac{\partial Error}{\partial W_1}=\frac{\partial Error}{\partial Y} \cdot \frac{\partial Y}{\partial W_1}\]
+\[\frac{\partial Error}{\partial W_1}=\frac{\partial Error}{\partial Y} \cdot \left(\frac{\partial Y}{\partial \sigma}\cdot \frac{\partial \sigma}{\partial Z_2} \cdot \frac{\partial Z_2}{\partial W_1}\right)\]
+The new $W_1$ is computed as
+\[W_1=W_1-LR \cdot \frac{\partial Error}{\partial Y} \cdot \left(\frac{\partial Y}{\partial \sigma}\cdot \frac{\partial \sigma}{\partial Z_2} \cdot \frac{\partial Z_2}{\partial W_1}\right)\]
+The same process is repeated for all other weights and biases in the neural network, for a number of times, until the minimum possible error is reached.
+\pagebreak
+\section{Character recognition system using neural network}
+\indent\indent A character recognition neural network model was implemented in MATLAB. Here the input was a 35-bit word suggesting a noisy alphabet. Moreover, the expected output from the system is a 26-bit word suggesting the original character.\\
+\indent The 35-bit noisy input can be represented in a 7 x 5 block or pixel, where each pixel can take a value of either 0 or 1. Pixels with value one are represented in black, and those with value zero are represented in white.\\
+For example, the character 'A' can be represented as\\ 
+A: 01110 10001 10001 11111 10001 10001 10001\\
+If some pixels are altered, it is a noisy character version. The noises can vary from 4-bit flips to 7-bit flips in this model.\\
+The 26-bit output is mapped to the 26 alphabet characters of the English language.\\
+A: 1000000000000 0000000000000\\
+B: 0100000000000 0000000000000\\
+and so on\\
+Z: 0000000000000 0000000000001\\
+The model is trained on the original non-noisy character 35-bit word. After the training, the model should be able to predict the original character even when a noisy character is given as input.
+\pagebreak
+\subsection{Neural architecture}
+\indent \indent\indent The neural architecture of the model can be obtained by continually adding hidden layers and hidden neurons and measuring the error, which uses the concept of overfitting and underfitting. If the hidden layer has very few neurons or very few numbers, it will lead to the condition underfitting. In such cases, the input is too complex to be handled by that many few neurons. However, if the number of hidden neurons and hidden layers is very high, the model is overly complex for the given input. The condition is known as overfitting.\\ 
+\indent \indent In the case of overfitting, the model performs very well on the training data, and the error becomes approximately zero. However, it fails to generalize the input feature, and the error becomes very high for data other than training data (testing data).\\ 
+\indent \indent In the case of underfitting, the model performs very poorly for both training and testing data. 
+So to find the optimum number of hidden layer neurons and hidden layer, the model should not overfit or underfit. The training error (error while working on the training data) and testing error (error while working on the testing data) are calculated. These errors are plotted against the number of neurons. That neuron is considered where the training and testing errors are close.
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=5.7cm]{Images/39.png} 
+   \caption{Optimizing the neural architecture using testing and training error.}
+\end{figure}
+
+
+
+\section{Neural network using spintronics}
+\indent \indent \indent An electron, along with a charge, also contains spin. These spins can be used to store and transmit binary information, the UP spin encoded as 0 and DOWN spin as 1. Spintronic devices are rapidly developing nanotechnologies; they can store, process, and communicate. It is just a matter of spin rotation since there is no charge movement; hence there is no ohmic dissipation, but dissipation due to magnetization damping prevails. In order to change the spin, an external charge voltage/current is applied, which in turn dissipates energy. At 100 nm dimension, all the spins align in one direction, represented as one single large spin.~\cite{hopfield1982neural, mead1989adaptive}\\
+\indent \indent Multiferroics have gotten much attention in recent days for devising energy-efficient devices ~\cite{roy2017spintronics,roy2020energy}. Recently, it has been shown that there can be a high-gain region in the input-output characteristics of the nanomagnets, which can harness the activation function for a neuron~\cite{roy2017ultralow}. Spintronic devices encapsulate the weight, sum, and activation function, which are the computing elements of the artificial neurons. Spintronic devices are non-volatile, saving us from adding extra circuitry to keep the data intact. Spintronic devices have long endurance, unlike transistor-based devices, which is why such devices are deployed in cars, missions to Mars, etc. It can bear cosmic radiation and other harsh interstellar space environments as well.
+\pagebreak
+\subsection{Magnetic anisotropy}
+\indent \indent \indent Magnetic anisotropy refers to different magnetizations in different directions. The magnetization of a specimen depends on its shape. When an external magnetic field magnetizes a specimen of finite size, the free poles which appear on its ends will produce a magnetic field directed opposite to the magnetization. This field is called the demagnetizing field. The intensity of the demagnetizing field $H_d$ is proportional to the magnetic free pole density and, therefore, to the magnetization
+\[H_d=N_d\frac{I}{\mu_0}\]
+where $N_d$ is the demagnetizing factor, which depends on the specimen's shape.\\
+\indent \indent In the case of a sphere, because of its total symmetry, the demagnetization factor is the same in all directions; hence there is no anisotropy.
+Anisotropy exists in the case of an ellipsoid, as it is not symmetric in all directions. However, it is difficult to fabricate on a planar wafer because of its oval shape.
+Which makes an elliptical cylinder the best choice as it has in-plane shape anisotropy, and because of its planar surface, it is easy to fabricate on a planar wafer. The energy is given by 
+\[E=\frac{1}{2}\Omega M_s H_k sin^2 \theta \] 
+Where $\Omega$ is the volume of the elliptical cylinder, $M_s$ is the saturation magnetization, and $H_k$ is the coercive field.
+
+\subsection{Magnetic field along in-plane: easy and hard axis}
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/19.png} 
+   \caption{An elliptical cylinder with thickness in x-direction, major-axis in z-direction, and minor axis in y-direction.}
+\end{figure} 
+\indent \indent \indent Switching magnetization from one direction to the opposite direction by applying a magnetic field in an In-plane easy and hard axis.~\cite{RefWorks:167, nature_news_art}\\
+In Figure 1.6, we have an elliptical cylinder whose major-axis is in the $\hat{z}$ direction, the minor-axis is in $\hat{y}$ direction, and the thickness is in the $\hat{x}$ direction\\
+
+\textbf{For In-plane hard axis}\\
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/20.png} 
+   \caption{Magnetic anisotropy for different value of $\theta$ when magnetic field is applied along in-plane hard axis.}
+\end{figure}
+\indent \indent The magnetic field (\textbf{$H_y$}) is applied along with the $\hat{y}$ direction of the elliptical cylinder. The magnetization vector of the cylinder is making an angle $\theta$ with the z-axis. Let's assume, initially the magnetization vector is along the z-axis (i.z. $\theta=0^o$), on application of magnetic field $H_y$, can the magnetization vector be made align in (-z)-axis (i.z. $\theta=180^o$)
+
+The anisotropic energy is given by 
+\[E=\frac{1}{2}\mu_0M_sH_ksin^2\theta - \mu_0M_sH_ysin\theta\]
+In Fig. 1.2, anisotropic energy is plotted against $\theta$($0^o - 180^o$) for different values of $H_y$.\\
+For a given value of $H_y$, the magnetization vector aligns such that the anisotropic energy is minimum. Hence, \[\frac{dE}{d\theta}=0 \implies \theta_{min}=sin^{-1}(H_y/H_k)\]
+The $\theta_{min}$ represent the angle made by the magnetization vector with the z-axis such that anisotropic energy is minimum. \\
+When $H_y=0$, $\theta_{min}$ comes out to be $0^o$ ,and there is a potential barrier at $\theta=90^o$, which prevents the spontaneous magnetization flipping from $\theta=0^o$ to $180^o$. \\
+As $H_y$ is increased gradually, the potential barrier at $\theta=90^o$ decreases and the $\theta_{min}$ shifts away from $\theta=0^o$, for example, when $H_y=0.7H_k$, $\theta_{min}=45^o$, i.z. on applying $H_y=0.7H_k$, the magnetization vector is making an angle of $45^o$ with the z-axis.\\
+When $H_y=H_k$, $\theta_{min}=90^o$ and there is no potential barrier. But on further increasing the $H_y$ to however large value, the $\theta_{min}$ does not change, and it still remains at $\theta_{min}=90^o$.\\
+\indent \indent Which suggest that on application of magnetic field along in-plane hard axis will not be able to switch the magnetization to the opposite direction.\\
+\\\\\\\\
+\textbf{For In-plane easy axis}
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/21.png} 
+   \caption{Magnetic anisotropy for different value of $\theta$ when magnetic field is applied along in-plane easy axis.}
+\end{figure}
+When the magnetic field is applied along the $\hat{z}$ direction of the elliptical cylinder.The anisotropic energy is given by 
+\[E=\frac{1}{2}\mu_0M_sH_ksin^2\theta - \mu_0M_sH_zcos\theta\]
+For a given value of $H_z$, the magnetization vector aligns at an angle $\theta_{min}=sin^{-1}(H_z/H_k)$
+In Fig. 1.3, anisotropic energy is plotted against $\theta$($0^o - 180^o$) for different values of $H_z$.
+When $H_z=0$, $\theta_{min}$ comes out to be $0^o$ ,and there is a potential barrier at $\theta=90^o$, which prevents the magnetization flipping from $\theta=0^o$ to $180^o$. \\
+On increasing the $H_z$, the energy at $\theta=0^o$ side increases and $\theta=180^o$ side decreases, thereby reducing the potential barrier.\\
+When $H_z=H_k$, $\theta_{min}=90^o$ and instead of a potential barrier there is a potential down hill. So on further increasing the $\theta_{min}$ becomes $180^o$\\
+Which concludes that when magnetic field is applied along the in-plane easy axis direction, magnetization switching is possible.
+  
+
+\subsection{Perpendicular Magnetic Anisotropy}
+\begin{figure}[H]
+	\centering
+  \includegraphics[scale=0.56]{Images/22.png}
+  \caption{Magnetization is perpendicular to the planar surface in PMA.}
+\end{figure}
+\indent \indent \indent If the magnetization is in perpendicular direction to the planar surface, we have perpendicular magnetic anisotropy or PMA. For easy axis, $\theta = 0^o$ and $180^o$ and for the hard axis, $\theta = 90^o$.  The magnet's plane is $\phi=\pm 90^o$. Perpendicular magnetic anisotropy is essential as it decreases the lateral dimension, just like transistor scaling, it can accommodate more number of similar magnets in an given finite area~\cite{ikeda2010perpendicular,roy15_3}.
+\begin{figure}[H]
+	\centering
+  \includegraphics[scale=0.56]{Images/23.png}
+  \caption{Two types of PMA: a. Bulk anisotropy b. Interface anisotropy.}
+\end{figure}
+There are two types of perpendicular anisotropy: a. Bulk anisotropy and b. Interface anisotropy\\
+\textbf{Bulk anisotropy:} In this, the whole material is such that the magnetization is always perpendicular to the planar surface\\
+\textbf{Interface anisotropy:} This anisotropy occurred at the interface of two different materials~\cite{ikeda2010perpendicular}.\\\\
+The following expression gives the energy.
+\[E_{shape}(\theta,\phi)=\frac{1}{2}\mu_0 M_s^2\Omega N_d(\theta,\phi)\]
+Where $N_d(\theta,\phi)$ is the $\theta,\phi$ dependence demagnetization factor, and is given by
+\[ N_d(\theta,\phi)=N_{d_{xx}} sin^2\theta cos^2 \phi + N_{d_{yy}} sin^2\theta sin^2\phi + N_{d_{zz}} cos^2 \theta \]
+$E_{shape}$ can be written as
+\[E_{shape}(\theta,\phi)=\frac{1}{2}\mu_0 M_s[H_k+H_d cos^2 \phi]\Omega\]
+$H_k$ is the coercive field, $H_d$ is the demagnetization field, $M_s$ is the saturation magnetization, and $\omega$ is the volume.
+For circular cross-section
+\[H_d=(N_{d_{xx}} - N_{d_{yy}})M_s=0\]
+\[H_k=(N_{d_{yy}} - N_{d_{zz}})M_s\]
+Hence, magnetic anisotropy for perpendicular magnetic anisotropy, $E_{PMA}$ can be written as follows
+\[E_{PMA}=\frac{1}{2}\mu_0 M_s H_{PMA}\Omega sin^2 \theta \]
+\[H_{PMA}=H_k + H_{interface}\]
+\pagebreak
+\subsection{Magnetostriction}
+\indent \indent \indent Magnetostriction is a phenomenon where the shape of a ferromagnetic material change during magnetization~\cite{RefWorks:164}. The deformation or the strain, $ \frac{\partial l}{l}$, generated is usually small and in the range $10^{-5}$ to $10^{-6}$~\cite{chika97}. On increasing the magnitude of magnetic field, the magnetostriction strain increases. After a certain magnetic field the strain reaches a saturation value $\lambda$ and known as the magnetostrictive co-efficient~\cite{chika97, RefWorks:178}.
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/24.png} 
+   \caption{Magnetostriction elongation as a function of applied magnetic field.}
+\end{figure}
+\indent \indent This phenomenon is because the crystal structure inside the domain spontaneously deforms in the direction of magnetization. The strain axis rotates with the magnetization, creating a deformation, generating strain.\\
+\indent The spontaneous strain in the domain is expressed as $e=\frac{3}{2} \lambda$.\\
+The magnetostriction strain depends on the angle $\psi$, made by the applied magnetic field with the easy axis of the ferromagnetic specimen~\cite{chika97}.
+\[\Delta(\frac{\partial l}{l})=\frac{3}{2}\lambda(1-cos^2\psi)\]
+The higher the magnetic field, the domain magnetization rotates towards the direction of the applied field. If H is parallel to the easy axis $\Delta(\frac{\partial l}{l})=0$, that is, there will be no elongation or no strain generated.
+
+\subsection{Multiferroics and Multiferroic Composites}
+\begin{figure}[H]
+	\centering
+   \includegraphics[scale=0.56]{Images/18.png} 
+   \caption{Electric, elastic, and magnetic properties of multiferroics.}
+\end{figure}
+\indent \indent \indent In nature, there exist ferroelectric and ferromagnetic materials. \\
+\textbf{Ferroelectric materials} are those materials whose polarization changes on changing the electric field and vice versa.
+Similar to ferroelectric, the \textbf{ferromagnetic materials} are those materials whose magnetization changes on changing the magnetic field and vice versa. \\
+\indent \indent Certain materials possess both the properties of ferroelectric and ferromagnetic materials. These materials are known as \textbf{multiferroics}. For a multiferroic material, the polarization changes on changing the magnetic field, and the magnetization changes by changing the electric field.\\   
+In the Figure 1.12, the outer node of the triangle, which consists of the electric field \textbf{E}, magnetic field \textbf{H}, and the stress \textbf{$\sigma$} are the physical parameters that can be changed. The inner node of the triangle, which consists of polarization \textbf{P}, strain \textbf{$\epsilon$}, and the magnetization \textbf{M} are the macroscopic observables of the respective physical parameter.\\\\
+\textbf{Ferroelectric material:} change in E leads to change in P\\
+\textbf{Ferromagnetic material:} change in H leads to change in M and\\
+\textbf{Ferroelastic material:} change in $\sigma$ leads to change in $\epsilon$\\
+For multiferroic material, there is an intrinsic coupling between \textbf{E} and \textbf{H}, known as magneto-electric coupling
+\[\alpha_{ME}=\mu_0\frac{\partial M}{\partial E}\]
+\indent\indent At room temperature, the magneto-electric coupling is very weak. So instead of multiferroics, a multiferroic composite is used, a composite of piezoelectric and magnetostrictive materials ~\cite{RefWorks:165,RefWorks:842}. Piezoelectric materials are those materials, on applying an electric field, stress is generated at the body and vice versa, and magnetostrictive materials are those materials that generate stress on applying a magnetic field and vice versa. The composition of piezoelectric and magnetostrictive material serves the same purpose of multiferroics with strong magneto-electric coupling. Multiferroic composites are strain-mediated materials~\cite{roy15_2}.
+\[\alpha_{ME}=\mu_0\frac{\partial M}{\partial \sigma}\frac{\partial \sigma}{\partial E}\] 
+%\pagebreak
+\subsection{Giant Magnetoresistance}
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=5cm]{Images/25.png} 
+   \caption{Giant magnetoresistance with Cr layer sandwiched between Fe layer~\cite{baibich1988giant, binasch1989enhanced}.}
+\end{figure}
+\indent \indent\indent In 2007, the Nobel prize in physics was awarded jointly to Albert Fert and Peter Grunberg for the discovery of Giant magnetic resistance or GMR. In Fig. 1.13, there is a structure Fe/Cr/Fe; it is seen that on the application of a magnetic field, the resistance along the structure reduces. In Figure 1.13, the resistance ratio vs. Magnetic field is plotted against three different thicknesses of the chromium layer.~\cite{baibich1988giant, binasch1989enhanced}\\
+\indent \indent The phenomenon's origin is that the magnetization of the Fe layers on either side of the Cr layer is in anti-parallel orientation due to negative exchange interaction through the Cr layer. On application of magnetic field, the spin-dependent magnetic scattering of conduction electron is reduced, which causes a parallel orientation.\\
+The GMR is calculated as follows
+\[GMR=\frac{R(0)-R(H)}{R(H)}\]
+where $R(0)$ refers to resistance when no magnetic field is applied, $R(H)$ refers to resistance when the magnetic field is applied.
+
+\subsection{Tunnelling Magnetoresistance}
+\begin{figure}[H]
+	\centering
+   \includegraphics[width=12cm]{Images/26.png} 
+   \caption{Parallel and anti-parallel orientation in a TMR.}
+\end{figure}
+\indent \indent\indent Magnetic tunneling is observed for two ferromagnetic metal layers separated by thin insulating materials like $Al_2O_3$, and $MgO$. Similar to GMR, in the case of tunnelling magnetoresistance or TMR, when the magnetization on both the ferromagnetic layers is in parallel orientation, resistance is low. When they are in antiparallel orientation, the resistance is high. ~\cite{julliere1975tunneling,moodera1995large,RefWorks:786}\\
+\indent \indent This phenomenon occurs because below the Fermi level ($E_F$), the density of UP states is higher than the density of DOWN states for a UP magnetization. Similarly, for DOWN magnetization, the density of the DOWN state is higher than the density of the UP state.\\
+\indent \indent So for parallel orientation, as shown in Figure 1.14, for both sides of the insulator, below the Fermi level, the density of the UP state is equal on both sides ($N_L^{\uparrow}=N_R^{\uparrow}$), similar is the case for DOWN state ($N_L^{\downarrow}=N_R^{\downarrow}$). Hence, the states or the electrons can easily tunnel, resulting in low resistance. However, in the case of antiparallel orientation, the respective density of states is not same on both sides. In Figure 1.9, for the antiparallel case, the density of the UP state is high on the left side while the density of the UP state on the left side is low ($N_L^{\uparrow}>N_R^{\uparrow}$). Hence the electrons can not efficiently tunnel through the insulator, which results in increased resistance.~\cite{ RefWorks:300,miwa2014highly,RefWorks:33}\\
+The conductance is proportional to density of states:$N_L^{\uparrow},N_R^{\uparrow},N_L^{\downarrow},N_R^{\downarrow}$\\
+\[TMR=\frac{G_P-G_{AP}}{G_{AP}}\]
+Where $G_P=G^{\uparrow \uparrow}+G^{\downarrow \downarrow}$ and $G_{AP}=G^{\downarrow \uparrow}+G^{\uparrow \downarrow}$, and the conducatance are proportional to the density of states.\\
+$G^{\uparrow \uparrow} \propto N_L^{\uparrow}N_R^{\uparrow}$,\indent $G^{\downarrow \downarrow} \propto N_L^{\downarrow}N_R^{\downarrow}$,
+\indent $G^{\downarrow \uparrow} \propto N_L^{\downarrow}N_R^{\uparrow}$,
+\indent $G^{\uparrow \downarrow} \propto N_L^{\uparrow}N_R^{\downarrow}$.
+%\[G^{\uparrow \uparrow} \propto N_L^{\uparrow}N_R^{\uparrow}\]
+%\[G^{\downarrow \downarrow} \propto N_L^{\downarrow}N_R^{\downarrow}\]
+%\[G^{\downarrow \uparrow} \propto N_L^{\downarrow}N_R^{\uparrow}\]
+%\[G^{\uparrow \downarrow} \propto N_L^{\uparrow}N_R^{\downarrow}\]
+
+%\section{Magnetic Thermal Annealing}
+%Lattice and shape deformities in a material can significantly degrade its quality. Thermal annealing is a common technique to strengthen the solid by raising, maintaining, and slowly decreasing the temperature. Raising the temperature allows the atoms to diffuse more quickly to their proper location, and maintaining the temperature attains equilibrium, eliminating any structural imperfections.\\
+%When the magnetic field is applied during the thermal annealing process, it is known as Magnetic thermal annealing. It has some exciting effects on ferromagnetic materials. The most important one is the re-orientation of the easy axis of a magnetic material. In any magnetic material, the easy axis is determined by the lattice structure of the material. If the shape shows any symmetry, the easy axis will generally reflect this symmetry. There would be no global symmetry if there were many structural deformities, and the easy axis will be randomized.\\
+%When a deformed ferromagnetic material is thermally annealed in the presence of an externally applied magnetic field, the spins of each atom will align the direction of the applied magnetic field. When maintained at a high temperature, the system will attain an equilibrium within this field, causing a lattice re-orientation. The easy axis is parallel to the applied magnetic field.
+\pagebreak
+\section{Magnetic Thermal Annealing}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[scale=0.56]{Images/27.png} 
+   \caption{Experimental system of magnetic thermal annealing.}
+   %\end{subfigure}
+\end{figure}
+\indent \indent \indent In Figure 1.15, the experimental set-up for magnetic thermal annealing is shown. There is an electromagnet that provides a constant DC magnetic field, which is connected to a Constant Current Power Supply (CCPS) to provide a constant current to the electromagnet; there is a chiller to liquid cool the coils of the electromagnet, then there is the annealing setup, inside which sample is placed. Inside the annealing setup, there is a heater coil, which generates heat. A thermocouple inside the annealing chamber is connected to the heater PID controller which controls the amount and the duration of heating. The magnetic thermal annealing is done in a vacuum, for which there is a rotary vacuum pump connected to the annealing setup. To monitor the vacuum pump pressure, a pirani gauge is connected to the vacuum pump.
+    
+\section{Ferro-magnteic Resonance}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=3cm]{Images/58.png} 
+   \caption{The precessing magnetization vector the magnetic sample under the applied magnetic field.}
+   %\end{subfigure}
+\end{figure}
+\indent \indent\indent When a magnetic material is placed in a DC magnetic field, the magnetization vector rotates in a counter-clockwise direction along the direction of the DC field. It is called the precessional motion of the magnetization vector; as it does, it losses energy, and the rotational body falls in the direction of the DC field as shown in Fig. 1.16; this is known as damping~\cite{RefWorks:161, RefWorks:813}. This processing of the magnetization vector is captured by the Landau-Lifshitz Equation ~\cite{RefWorks:162, roy14_4} (LL Equation):
+\[\frac{dM}{dt}=-|\gamma|M\times H_{eff} - \frac{\alpha |\gamma|}{M}M\times M\times H_{eff}\]
+where $\alpha$ and $\gamma$ are the damping parameter and the Gyromagnetic ratio of the magnetic material, respectively. In FMR experiment our aim is to find $\alpha$ of the magnetic material.
+We will consider $\alpha$ later. The precessional motion of the magnetization vector is given by 
+\[\frac{dM}{dt}=-|\gamma|M\times H_{eff}\]
+DC magnetic field is applied along the z-axis, hence $M_z=M$, and the $M_x$ and $M_y$ has $e^{-i\omega t}$ dependence, hence
+\[\frac{dM_x}{dt}=-|\gamma|(H_z + (N_{yy}-N_{zz})M)M_y\]
+and
+\[\frac{dM_y}{dt}=|\gamma|(H_z + (N_{xx}-N_{zz})M)M_x\]
+Solving the above two, we get
+\[\omega^2=|\gamma|^2(H_z + (N_{yy}-N_{zz})M)(H_z+(N_{xx}-N_{zz})M)\]
+In case of, sphere: $N_{xx}=N_{yy}=N_{zz}$, therefore, $\omega =|\gamma|H_z$\\
+In-plane FMR: $N_{xx}=N_{zz}=0, N_{yy}=1$, therefore, $\omega =|\gamma|\sqrt{H_z(H_z+M)}$\\
+Perpendicular FMR:  $N_{xx}=N_{yy}=0, N_{zz}=1$, therefore, $\omega =|\gamma|(Hz-M)$\\
+On small rotations ~\cite{RefWorks:814},
+\[\frac{d^2\phi}{dt^2}+\alpha|\gamma|M\frac{d\phi}{dt}+\omega_0^2\phi=0\]
+where $\omega_0=|\gamma|\sqrt{H_z(H_z+M)}$, for in-plane FMR\\
+To negate the damping, and to keep the magnetization rotating, a transverse AC field $H_y(t)=H_{y0}e^{i\omega t}$ is applied.
+\[\frac{d^2\phi}{dt^2}+\alpha|\gamma|M\frac{d\phi}{dt}+\omega_0^2\phi =|\omega|^2MH_{y0}e^{i\omega t} \]
+On solving the differential equation, $\phi(t)=\phi_0e^{i\omega t}=|\phi_0|e^{i(\omega t+\delta)}$, where\\
+\[\phi_0=\frac{|\gamma|^2MH_{y0}}{(\omega_0^2 - \omega^2)^2 + (\alpha|\gamma|M\omega)^2}[(\omega_0^2 - \omega^2)-i\alpha|\gamma|M\omega]\]
+\[|\phi_0|=\frac{|\gamma|^2MH_{y0}}{\sqrt{(\omega_0^2 - \omega^2)^2 + (\alpha|\gamma|M\omega)^2}}, tan \delta = \frac{-\alpha|\gamma|M\omega}{(\omega_0^2 - \omega^2)}\]
+The FMR absorption is given by the Imag($\phi_0$), known as the Lorentzian
+\[Imag(\phi_0)=\frac{|\gamma|^2MH_{y0}\alpha|\gamma|M\omega}{(\omega_0^2 - \omega^2)^2 + (\alpha|\gamma|M\omega)^2}\]
+ $\omega=\omega_0$, $Imag(\phi_0)=\frac {H_{y0}|\gamma|}{\alpha \omega_0}$\\
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=5cm]{Images/59.png} 
+   \caption{FMR absorption given by the imaginary part of the lorentzian.}
+   %\end{subfigure}
+\end{figure}
+The FMR linewidth $\Delta H$, Half width at half maximum (HWHM) is given by:
+\[\Delta H =\frac{\alpha\omega_0}{|\gamma|}\]
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/60.png} 
+   \caption{Derivative FMR signal plotted against magnetic field~\cite{RefWorks:161}.}
+   %\end{subfigure}
+\end{figure}
+\pagebreak
+%\chapter{Method} \label{ch: method}
+\section{Electron Beam Lithography}
+\indent \indent\indent Electron beam (e-beam) lithography is a method that utilizes an electron gun from a scanning electron microscope. This method is used to draw patterns at nanometer levels. The electrons are exposed to a film of photoresist, which reacts with the electrons. Generally, there are two types of photoresists: positive and negative. When a positive photoresist is exposed to the electron beam, those parts exposed to the electron beam become soluble in the photoresist developer solution. However, when a negative photoresist is exposed to the electron beam, those parts that are exposed become hard, and the rest part becomes soluble in the photoresist developer solution.
+\begin{itemize}
+	\item At first, the wafer is cleaned inside ultrasonic cleaner three times with electronic grade acetone and one time with methanol.
+	\item Which then cleaned with DI water to remove any remains of acetone or methanol.
+	\item Then, the wafer is cleaned and dried by blowing a Nitrogen gun.
+	\item After which the wafer is dehydrated to remove moisture using a hot plate.
+	\item Then, the wafer is kept on the chuck of the spin coater, an adequate amount of photoresist is put on the wafer and is rotated at a certain RPM to get the required thickness.
+	\item Once the spin coating is done, the wafer is pre-baked by putting it on a hot plate so that photoresist becomes hard.
+	\item Then electron beam is exposed to the photoresist area.
+	\item Then, the exposed sample is placed inside the developer solution (IPA:MIBK=3:1 + 2\% DI water).
+	\item After which sputtering deposition is performed
+	\item Then lift-off process is done by putting the wafer in acetone for 5 minutes at $30^0$C to remove the photoresist layer.
+	
+\end{itemize} 
+   
+\section{Atomic Force Microscopy}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=6cm]{Images/53.png} 
+   \caption{Schematic view of the working principle of atomic force microscopy.}
+   %\end{subfigure}
+\end{figure}
+%Magnetic force microscopy or MFM is used for imaging the magnetic domains of a magnetic sample.
+%It consists of a flexible cantilever, a magnetic tip on the front of the cantilever, and then a laser aligned to the top of the cantilever. There is a photo detector that detects the reflected laser from the cantilever. The tip is scanned over the magnetic sample. Since the tip is magnetized, it is either attracted or repelled from the sample based on the magnetization direction of each domain. Based on the force acting on the tip, the cantilever moves up and down, deflecting the laser received at the photo detector. Based on the degree of deflection, the imaging of the sample is done.
+\indent \indent\indent Atomic force microscopy (AFM) is used for imaging the topographical feature of a sample. It consists of a flexible cantilever that holds a tip in the front part of the cantilever. A laser is targeted to the cantilever, which is reflected to the photodetector. The tip scans the sample. It experiences Van der wall's forces, electrostatic forces, magnetic forces, or any other force that arises from the physical interaction between the surface and the tip. This force causes the tip to deflect, and the change in angle of the reflected ray is measured from which the topography of the sample is imaged.\\
+\indent \indent For magnetic material, a magnetic tip is used. Since the tip is magnetized, it is either attracted or repelled from the sample based on the magnetization direction of each domain. Based on the force acting on the tip, the cantilever moves up and down, deflecting the laser received at the photo detector. Based on the degree of deflection, the imaging of the sample is done.
+\section{Vibrating Sample Magnetometer}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=12cm]{Images/54.png} 
+   \caption{Schematic view of the working principle of vibrating sample magnetometer.}
+   %\end{subfigure}
+\end{figure}
+\indent \indent\indent Vibrating sample magnetometer (VSM) is a highly sensitive instrument used for precise magnetic moment measurements. It operates on the basic principle of Faraday's law. It is useful in measuring the magnetic behavior of a magnetic material.\\
+\indent \indent The instrument consists of an electromagnet, which generates a constant DC magnetic field. There is a driver rod over which the magnetic sample is pasted. The rod can oscillate in the vertical direction with some fixed frequency and amplitude. When the sample is brought into the DC field, the constant magnetic field magnetizes the sample, and the magnetization vector aligns in the direction of the DC field. Due to this, the samples create it's own magnetic field when the driver rod starts oscillating—the magnetic field due to the sample changes with respect to the time. There are pick-up coils beside the sample, which pick up the alternating magnetic field and generates an electric field in the pick-up coil based on Faraday's law. The induced current is then amplified and sent to the Superconducting Quantum Interference Device (SQUID).
+%\section{X-ray Diffraction (XRD)}
+\pagebreak
+\section{X-ray Diffraction }
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=4cm]{Images/70.png} 
+   \caption{Schematic view of the working principle of X-ray diffraction.}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent X-ray diffraction (XRD) is a technique used to identify the deposited materials. The XRD system consists of an X-ray tube that emits an X-ray, then there is a sample holder to hold the sample, and there is an X-ray detector. The X-rays are produced in the cathode ray tube; when these X-rays hit the atom of the target material, it knock out the inner shell electrons of the target, thereby imparting energy to the atom. This energy is again released by the atom, which generates characteristics of X-ray spectra. These spectra are filtered to produce monochromatic X-rays; these X-rays are directed onto the sample. The sample and the detector are rotated, and the intensity of the reflected X-ray is recorded. When the incident monochromatic X-rays are directed toward the sample, if it satisfies the Bragg equation, constructive interference occurs, and a peak in intensity is measured. 
+\section{X-ray Reflectivity}
+\indent \indent \indent X-ray reflectivity (XRR), is a measurement technique that uses X-ray reflection intensity to determine the thickness of a multilayer thin-film structure. 
+When an X-ray beam falls on the surface of a layer, if the incident angle, $\theta_i<\theta_c$, where $\theta_c$ is the critical angle, total reflection occurs, if $\theta_i=\theta_c$ the beam propagates along with the layer, and if $\theta_i>\theta_c$ some part of the beam reflects and refracts.
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=12cm]{Images/64.png} 
+   \caption{Reflection and refraction of X-ray beams with change in incident angle $\theta_i$.}
+   %\end{subfigure}
+\end{figure}
+\indent\indent The X-ray intensity curve is plotted between the intensity of the reflected X-ray and the incident angle. When an X-ray beam falls on the surface of the layers, some part of the beam is reflected, and some part gets refracted. The observed x-ray scattering is the sum of individual electron scattering. When the reflected ray hits another layer, it is either totally reflected or reflected and refracted. This reflected ray from the interface of $1^{st}$ and $2^{nd}$ medium interfere with each other, which gives rise to oscillation. This oscillation depends on the film thickness; the thicker the film, the shorter the oscillation time period.
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=12cm]{Images/65.png} 
+   \caption{XRR curve for thickness measurement of MgO/CoFeB sample, measured at UGC-CSR-DAE Indore.}
+   %\end{subfigure}
+\end{figure}
+\pagebreak
+\section{Signal generator: R\&S SMB100A}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/71.jpg} 
+   \caption{Signal generator: R\&S SMB100A}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent A signal generator is a device used to produce different signals at different frequencies. The R\&S SMB100A signal generator can produce signals ranging from 0.01 Hz to 12.75 GHz. There are two output ports in the front panel; one port is for low-frequency signals ranging from 0.01 Hz to 1 MHz, and the other port is for radio frequency signals ranging from 100 kHz to 12.75 GHz. On the front panel, there is a screen and buttons to interact with the device.
+\section{Power supply: R\&S NGL202}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/15.jpg} 
+   \caption{Power Supply: R\&S NGL202}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent A power supply is a two-quadrant device; it can act as a source, sink and constant resistance. It is usually used as a DC voltage source. It has two-independent channel that can be used to source or sink DC voltage.
+\section{Spectrum analyzer: R\&S Spectrum rider FPH}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/72.jpg} 
+   \caption{Spectrum analyzer: R\&S Spectrum rider FPH}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent Spectrum analyzers are used for finding frequency response and real-time signal processing of radio frequency signals. The R\&S Spectrum Rider FPH model 13 spectrum analyzer can work up to 13 GHz frequency. On the front panel, there is an LCD panel that displays the trace; it has buttons for putting marker(s) on traces, finding the center frequency, and adjusting the frequency range. It has inbuilt functionality to save previous settings. It also has a dedicated button for taking a snapshot of the trace.
+\section{Source Measuring Unit: Keithly 2450}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/74.png} 
+   \caption{Source Measuring Unit (SMU): Keithly 2450}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent Source Measuring Unit (SMU) is a four-quadrant device; it can source and measure simultaneously. It is a very high precision device and has high tolerance toward noise. It can also be used as a constant current source and used for resistance measurement.
+\section{Lock-in amplifier: SRS SR830}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/73.jpg} 
+   \caption{Lock-in amplifier: SRS SR830}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent A lock-in amplifier is used to detect and measure a tiny AC signal. It is mostly used for rectifying signals buried with noise by locking the signal to a very small bandwidth. The Stanford research system SR830 lock-in amplifier can work from 0.01 Hz to 102 kHz. It has an internal oscillator, which can be used as the reference signal. It can take both single-ended input or differential input signals. On the front panel, three screens, out of which two show the X, R, and Y, $\theta$ values of the output signal, and the other screen shows the reference signal parameters.
+\section{Probe station}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/16.png} 
+   \caption{Probe station}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent A probe station is used for the electrical measurement of samples with a smaller dimension which cannot be done with regular probes. The device consists of a chuck on top of which the samples are placed. There is a microscope and light source that enable visualization of the sample while making contacts. For making contacts, micropositioners are used, whose tips can be as small as 1 $\mu$m in diameter. The micropositioner can be connected to a power supply to apply the stimulus.  
+\section{Oscilloscope}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7.5cm]{Images/17.png} 
+   \caption{Oscilloscope: R\&S RTM3002}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent An oscilloscope is used for visualizing electrical signals and how they change over time. It is generally used to measure the AC voltage in circuits. It can do the Fourier analysis on any time-varying signal. The frequency range of the oscilloscope is 0.01 Hz to 100 MHz.
+\section{Other experimental apparatus}
+\subsection{Spin coater}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/4.png} 
+   \caption{Spin Coater: Holmarc HO-TH-05}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent For spin-coating PMMA of 100 nm thickness on a Si substrate, a Holmarc Spin-coater is used. It has a nylon bowl. Inside, a chuck holds the sample using a vacuum pump. There is an LCD and keyboard in the front panel to program the spin-coater's rotation speed, acceleration, period of rotation, and the number of steps.
+
+\subsection{Shaker}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/5.png} 
+   \caption{Shaker: Remi RS-12R}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent To shake or to mix chemicals, the shaker is used. It has adjustable rollers, which help fix the beaker firmly on the movable platform. On the front panel, there are buttons to set the RPM and the time duration.
+
+\subsection{Hot plate}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/6.png} 
+   \caption{Hot plate: Neuation iStir HP550}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent To bake samples at a high temperature, a hot plate is used. It has a ceramic platform over which samples are placed. The ceramic plate can go up to $550$ $^oC$ . In the front panel, there are buttons to set the temperature, timer, and start/stop operations.
+
+\subsection{Ultrasonic cleaner}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/7.png} 
+   \caption{Ultrasonic cleaner: Athena UAC}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent For cleaning samples, beakers, or other apparatus by vibrating at a high frequency to remove unwanted materials. Samples are placed inside a cleaner with an appropriate solvent that cleans while vibrating. There are buttons for start/stop, timer, and temperature in the front panel.
+
+\subsection{Hot air oven}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/8.png} 
+   \caption{Hot air oven}
+   %\end{subfigure}
+\end{figure}
+
+\indent\indent\indent A hot air oven is used to sterilize the samples using dry air. Inside there is a thermostat to control the temperature. The inside wall is thermally insulated; hence it keeps the heat inside. On the front panel, it has an ON/OFF button, a heater indicator to indicate the heating status, and there is a PID controller, which controls the thermostat. 
+
+\subsection{Rota mantle}
+
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/9.png} 
+   \caption{Rota Mantle}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent For heating solvents while stirring with the help of a magnetic bead. They are usually used in the distillation process of chemicals. It has a nylon chamber inside which the glass apparatus, like a round-bottom flask, is placed. There is a PID controller on the front panel, which programs the heating. Then there is a heater indicator, which displays the heating status, and there is an RPM controller, which controls the RPM of the magnetic bead used while stirring. 
+
+\subsection{Nitrogen gun}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=5cm]{Images/10.png} 
+   \caption{Nitrogen Gun}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent For cleaning of wafers by blowing $N_2$ gas. There is pipe all over the lab, which are connected to the $N_2$ cylinders, and there are outlets at work stations, where an air gun can be used to blow directly on the wafers.
+
+\subsection{Vacuum desiccator}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/11.png} 
+   \caption{Vacuum Desiccator}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent Samples that are prone to outside environment such as oxygen, moisture etc. are kept inside the vacuum desiccator. It is closed container after putting sample inside, the chamber is vacuum using a vacuum pump. After the desiccator is made vacuum, the knob to which the vacuum pump is connected is closed.
+
+\subsection{Muffle furnace}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=7cm]{Images/12.png} 
+   \caption{Muffle furnace: Ridhi RVSW-151}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent To thermally anneal samples at a higher temperature to passivate all dangling bonds and structural imperfection. The muffle furnace can reach up to $1200$ $^oC$. In the front panel, there is a PID controller, which programs and regulates the furnace's heating. There is a heating indicator to indicate the heating status of the device. There is an energy regulator to control the power of the furnace. The samples as placed inside the heating chamber, which has insulated inner walls to prevent heat loss.  
+
+\subsection{Fume hood}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=4cm]{Images/13.png} 
+   \caption{Fume hood}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent Experiments which uses harmful chemicals or ejects harmful fumes is carried out inside the fume hood. It also prevents from accidental spillage of harmful chemicals, Inside there are nozzles for different gas like $N_2$, $O_2$, etc. 
+
+\chapter{Results} \label{ch: results}
+
+\section{Character recognition system using neural network}
+\subsection{Neural architecture modeling}
+\indent\indent\indent For the character recognition system, initially, the model was given one hidden layer, and the number of hidden layer neurons was increased from 1 to 200. The respective error vs. no. of neurons was plotted. It is seen that after 40 neurons, the error gap started increasing. Therefore the first hidden layer has 40 hidden neurons. Now the model was given two hidden layers. The first hidden layer has 40 neurons, and the second hidden layer's neurons vary from 1 to 200. It is seen that the error gap started increasing after the 35th neuron. However, the error gap of the model with the two hidden layer systems was more than the single hidden layer system, which suggested that the model is overfitting. So to make sure, another hidden layer was added, and the same procedure was followed, the error gap increased even further. Hence the optimized number of hidden layers and hidden layer neurons is one hidden layer with 40 hidden neurons.
+\[[35\text{ input nodes}] \longrightarrow [40\text{ hidden nodes}] \longrightarrow [26\text{ output nodes}]\] 
+
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=7.1cm]{Images/40.png} 
+   \caption{Optimizing first hidden layer}
+\end{figure}
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=7.1cm]{Images/41.png} 
+   \caption{Optimizing second hidden layer}
+\end{figure}
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=7.1cm]{Images/42.png} 
+   \caption{Optimizing third hidden layer}
+\end{figure}
+\subsection{Model output}
+\indent\indent\indent The model was trained on 26 data depicting the original non-perturbed data, and the testing of the model was done on data with different degree of perturbation.\\\\
+\begin{minipage}{0.5\linewidth}
+\textbf{For 4-bit flip}\\
+Testing data: 520\\
+No. of correct predictions: 424\\
+No. of wrong predictions: 96\\
+Accuracy of the model: 81.54\%   \\
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\linewidth}
+\textbf{For 6-bit flip}\\
+Testing data: 520\\
+No. of correct predictions: 365\\
+No. of wrong predictions: 155\\
+Accuracy of the model: 70.19\%   \\
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+\textbf{For (4 to 8)-bit flip}\\
+Testing data: 2678\\
+No. of correct predictions: 1866\\
+No. of wrong predictions: 812\\
+Accuracy of the model: 69.68\%   \\
+\end{minipage}
+
+  
+\section{Improvement of magnetization using magnetic thermal annealing}
+\indent\indent\indent To test the improvement of magnetization using magnetic thermal annealing. A magnetic sample was taken, from substrate side Ta(5)/MgO(0.8)/ CoFeB(10) (All the numbers inside the bracket are the nominal thickness of the material deposited in nano-meter). This sample was processed through magnetic thermal annealing along the in-plane easy axis direction. The magnetic thermal annealing was done at $400$ mT magnetic field, maintained at $400^oC$ for 1 hour at $10^{-3}$ Torr in vacuum. The experimental VSM results of the sample before (in blue) and after (in red) the MTA is shown in the Figure 2.4.
+\begin{figure}[H]
+	\centering
+   \includegraphics[height=7.1cm]{Images/37.png} 
+   \caption{VSM results of before and after MTA of MgO/CoFeB 10nm sample.}
+\end{figure}
+\indent\indent From the blue curve, it is seen that before MTA the CoFeB sample has a coercive field, $H_k$ = 21 Oe and Magnetization, M = $3.7\times10^{-5}$ emu. From the red curve, it is seen that after MTA, the CoFeB sample, has $H_k$ = 70 Oe and M=$5.2 \times 10^{-5}$ emu. After MTA there is a 18.5 times more M-H area. Which suggest that upon doing magnetic thermal annealing, there is improvement in the magnetization of the CoFeB 10nm sample.
+
+\section{Development of LabView environment for different instruments}
+\subsection{Power supply} 
+\indent\indent\indent To automate the power supply and for data acquisition, LabVIEW was used~\cite{ni}. The two-channel power supply was automated to obtain the VI curve of a resistor and a diode and the input characteristics of a transistor.
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=12cm]{Images/67.png} 
+   \caption{LabVIEW automation of power supply R\&S NGL202.}
+   %\end{subfigure}
+\end{figure}
+%\begin{minipage}[b]{0.48\linewidth}
+%%\centering
+%\includegraphics[width=6.7cm]{Images/46.jpg}  
+%\end{minipage}
+%\hfill
+%\begin{minipage}[b]{0.48\linewidth}
+%%\centering
+%\includegraphics[width=6.7cm]{Images/47.jpg}  
+%\end{minipage}
+%\\
+%\begin{minipage}[b]{0.48\linewidth}
+%%\centering
+%\includegraphics[width=6.7cm]{Images/48.png}  
+%\end{minipage}
+
+
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=6cm]{Images/46.png} 
+   \caption{VI automation of diode using power supply.}
+   %\end{subfigure}
+\end{figure}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=6cm]{Images/47.png} 
+   \caption{VI automation of resistance using power supply.}
+   %\end{subfigure}
+\end{figure}
+
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=8cm]{Images/48.png} 
+   \caption{VI automation of transistor using power supply.}
+   %\end{subfigure}
+\end{figure}
+\subsection{Electromagnet}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[scale=0.56]{Images/49.png} 
+   \caption{LabVIEW: Electromagnet automation}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent The electromagnet was automated using LabVIEW. It was used to control the current flowing into the electromagnet's coil to change the constant magnetic field generated at the poles. It was also used to measure the magnetic field through a gauss probe connected to the controller of the electromagnet.
+\subsection{Signal generator}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[scale=0.56]{Images/50.png} 
+   \caption{LabVIEW: Signal generator automation}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent The signal generator was automated using LabVIEW. It was used to set different RF and LF frequencies of different amplitudes. With LabVIEW, the signal generator was automated to sweep from one frequency range to another frequency range.
+\subsection{Spectrum analyzer}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[scale=0.56]{Images/51.png} 
+   \caption{LabVIEW: Spectrum analyzer automation}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent The spectrum analyzer was automated using LabVIEW to measure the power level of a given input signal, detects different frequency present in the signal. It was able to program the device, where to put the marker, setting the center frequency.
+\subsection{Lock-in amplifier}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=12cm]{Images/45.png} 
+   \caption{LabVIEW: Lock-in amplifier automation}
+   %\end{subfigure}
+\end{figure}
+\indent\indent\indent The Lock-in amplifier was automated using LabVIEW to remove noise from a signal by narrowing the bandwidth. It was automated to take single or differential mode input, setting up the sensitivity and the time constant. Apart from this, it can directly program the lock-in amplifier to set an internal reference frequency. The SR830 lock-in amplifier can detect the signal at 10kHz with bandwidth as narrow as 0.01 Hz. 
+\section{Development of ferromagnetic resonance system}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=10cm]{Images/62.png} 
+   \caption{Experimental system for ferromagnetic resonance.}
+   %\end{subfigure}
+\end{figure}
+
+\indent\indent\indent The ferromagnetic resonance setup consists of an electromagnet, signal generator, spectrum analyzer, waveguide, and a laptop with LabVIEW.
+The magnetic sample is placed on top of the waveguide's signal channel. For in-plane ferromagnetic resonance, the longer side of the sample is placed in parallel to the signal line. The waveguide, along with the sample, is placed in between the poles of the electromagnet. The electromagnet generates the DC magnetic field, which causes the precession of the magnetization vector. To negative the damping of the magnetization vector, a transverse AC field is required, provided by the signal generator, connected to the input end of the waveguide. The output from the waveguide is fed into the spectrum analyzer to measure the FMR absorption. 
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=5cm]{Images/61.png} 
+   \caption{Schematic of the ferromagnetic resonance system.}
+   %\end{subfigure}
+\end{figure}
+\subsection{Characteristic impedance of coaxial cable}
+\indent\indent\indent If the coaxial cable is terminated with a purely resistive load, $R$, the signal will be reflected or transmitted at the end of the line ~\cite{fonseca2007very}. The transmission coefficient, T is given by:
+\[T=\frac{2R}{R+Z_{cable}}\]
+where 
+\[T=\frac{V_t}{V_0}=\frac{\text{transmitted signal}}{\text{insident signal}}\]
+
+In a limiting case, if the resistive load is infinite, the transmission coefficient becomes 2, i.z. The transmitted pulse is twice the incident pulse,
+\[\text{if R}\rightarrow\infty\text{; T=2;}V_t=2V+0 \]
+ and if the resistive load is equal to the $Z_{cable}$,  the transmission coefficient becomes 1, i.z. The transmitted pulse is same as the incident pulse.
+\[\text{if R}\rightarrow Z_{cable}\text{; T=1;}V_t=2V+0 \]
+By adding a potentiometer in parallel, the transmitted signal can be measured as a function of $R$.
+\[\frac{1}{T}=\frac{1}{2} + \frac{Z_{cable}}{2R}\]
+The slope of this equation gives the $Z_{cable}$ value.
+
+\begin{center}
+\begin{tabular}{||c c c c c c||} 
+ \hline
+ $V_0$ & $V_t$ & R & T & $\frac{1}{2R}$ & $\frac{1}{T}$\\ [0.5ex] 
+ \hline\hline
+ 3.78 & 3.5623 & 100 & 0.9424 & 0.0050 & 1.0611\\
+ 3.78 & 4.0866 & 200 & 1.0811 & 0.0025  & 0.9250\\
+ 3.78 & 4.2679 & 300 & 1.1291 & 0.0017  & 0.8857\\
+ 3.78 & 4.4100 & 400 & 1.1667 & 0.0013 & 0.8571\\
+ 3.78 & 4.4900 & 500 & 1.1878 & 0.0010 & 0.8419\\
+ 3.78 & 4.5810 & 600 & 1.2119 & 0.0008 & 0.8251\\
+ 3.78 & 4.6550 & 700 & 1.2315 & 0.0007 & 0.8120\\
+ 3.78 & 4.6840 & 800 & 1.2392 & 0.0006 & 0.8070\\
+ 3.78 & 4.6990 & 900 & 1.2431 & 0.0006 & 0.8044\\ 
+ 3.78 & 4.7530 & 1000 & 1.2574 & 0.0005 & 0.7953\\ [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=13cm]{Images/63.png} 
+   \caption{Characteristics impedance of coaxial cable.}
+   %\end{subfigure}
+\end{figure}
+
+%\begin{center}
+%\begin{tabular}{||c c c c c c||} 
+% \hline
+% $V_0$ & $V_t$ & R & T & $\frac{1}{2R}$ & $\frac{1}{T}$\\ [0.5ex] 
+% \hline\hline
+% 1.002 & 0.8340 & 49.8 & 1.66 & 0.00100 & 0.6007\\
+% 1.002 & 0.9060 & 100.1 & 1.81 & 0.0050  & 0.5530\\
+% 1.002 & 0.9600 & 200 & 1.92 & 0.0025  & 0.5219\\
+% 1.002 & 0.9720 & 300 & 1.94 & 0.0017 & 0.5154\\
+% 1.002 & 0.9800 & 400 & 1.96 & 0.0013 & 0.5112\\
+% 1.002 & 0.9860 & 500 & 1.97 & 0.0010 & 0.5081\\
+% 1.002 & 0.9900 & 600 & 1.98 & 0.0008 & 0.5061\\
+% 1.002 & 0.9940 & 700 & 1.98 & 0.0007 & 0.5040\\
+% 1.002 & 0.9960 & 800 & 1.99 & 0.0006 & 0.5030\\ 
+% 1.002 & 0.9980 & 900 & 1.99 & 0.0006 & 0.5020\\
+% 1.002 & 1.0000 & 1000 & 2.00 & 0.0005 & 0.5010\\ [1ex] 
+% \hline
+%\end{tabular}
+%\end{center}
+%\begin{figure}[H]
+%%\begin{subfigure}
+%	\centering
+%   \includegraphics[scale=0.56]{Images/44.png} 
+%   \caption{Characteristics impedance of coaxial cable}
+%   %\end{subfigure}
+%\end{figure}
+From the Figure 2.15, the fitted linear line gives the $Z_{cable} = 58.273 \Omega$ 
+%\subsection{Characteristic impedance of waveguide}
+%\subsection{Voltage and current measurement through coaxial cable}
+%Mention the oscilloscope results and power level of signal generator
+\subsection{Measurement of loss in the coaxial cable, connectors and the waveguide}
+The losses in the coaxial cable and connectors, are measured by the spectrum analyzer\\
+\textbf{Connection 1:} Signal generator is connected to the spectrum analyzer through an SMA cable (coaxial cable); from here, the loss due to a coaxial cable can be calculated.\\
+\textbf{Connection 2:} Signal generator is connected to the waveguide using an SMA cable, and the output from the waveguide is connected to the spectrum analyzer through another SMA cable; from here, the loss due to the waveguide and 2x SMA cable can be calculated.\\ 
+\textbf{Connection 3:} Same as Connection 2, with one L-connector connected to the waveguide; from here, the loss due to the waveguide, 2x SMA cable, and the L-connector can be calculated.\\
+\textbf{Connection 4:} Same as Connection 3, with one additional T-connector connected to the other end of the waveguide; from here, the loss due to the waveguide, 2x SMA cable, the L-connector, and the T-connector can be calculated.\\
+\textbf{Connection 5:} Same as Connection 3, with one additional 50 $\Omega$ termination to one open end of the  T-connector; from here, the loss due to the waveguide, 2x SMA cable, the L-connector, the T-connector, and the 50 $\Omega$ termination can be calculated.\\\\
+The signal generator was connected to the RF port at a frequency of 10 GHz and -10 dBm power.
+\begin{center}
+\begin{tabular}{||c c c c||} 
+ \hline
+ Connections & Signal generator dbM & Spectrum analyzer dbM & loss (dBm)\\ [0.5ex] 
+ \hline\hline
+ Connection 1 & -10 & -25.5 & 15.5\\ 
+ Connection 2 & -10 & -43 & 33\\
+ Connection 3 & -10 & -49 & 39\\
+ Connection 4 & -10 & -44 & 34\\
+ Connection 5 & -10 & -49.4 & 39.4\\  [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{||c c||} 
+ \hline
+ Components & Loss(dBm) \\ [0.5ex] 
+ \hline\hline
+ SMA cables & 15.5 \\ 
+ Waveguide & 2 \\
+ L-connector & 6 \\
+ T-connector & -5 \\
+ 50 $\Omega$ termination & 5.4 \\  [1ex] 
+ \hline
+\end{tabular}
+\end{center}
+\subsection{FMR result}
+This the in-plane FMR output from the FMR setup of a hard disk, where the magnetic field was varied from 65 mT to 200 mT, and a 9 GHz RF signal was given to generate the transverse field. 
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[scale=0.56]{Images/43.png} 
+   \caption{FMR absorption of a magnetic hard disk sample.}
+   %\end{subfigure}
+\end{figure}
+\subsection{Schottky diode measurement results}
+\indent\indent\indent The frequency of the output signal from the waveguide is in GHz, and the standard semi-conductor diode available can rectify AC signals up to 10 kHz frequency. Hence we use a Schottky diode to rectify the 9 GHz signal. 
+\\\\
+Schottky diodes are constructed using a metal electrode and N-type. Since the Schottky diode has a metal electrode on one side, it does not have the depletion region. The junction formed by the metal and the N-type material is the metal-semiconductor junction. The electron from the N-type material goes to the metal electrode in the forward bias. The drift of the majority of carriers enables the current to flow. In reverse bias, since there is no P-type material, there are no minority carriers to form the depletion region. The diode conduction stops very quickly, stopping the current flow, which is why it can operated at high RF frequencies .
+\\
+Two Schottky diodes available in the market were tested, SRP BAT85 and Infineon diode BAT 6302. The following are the results tested on each diode at a different frequency and power level. \\\\
+\textbf{Schottky diode: SRP BAT85 }\\\\
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Amazon/LF100Hz.png}  
+Input signal frequency: 100 Hz\\
+Signal without rectifying\\
+$Vpp = 1.6856\text{ }V$\\
+Signal after rectifying\\
+$Vpp = 135.24\text{ }mV$\\
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Amazon/LF1kHz.png}  
+Input signal frequency: 1 kHz\\
+Signal without rectifying\\
+$Vpp = 1.6807\text{ }V$\\
+Signal after rectifying\\
+$Vpp = 135.73\text{ }mV$\\
+\end{minipage}
+\\
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Amazon/LF100kHz.png}  
+Input signal frequency: 100 kHz\\
+Signal without rectifying\\
+$Vpp = 1.666\text{ }V$\\
+Signal after rectifying\\
+$Vpp = 131.32\text{ }mV$\\
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Amazon/LF1MHz.png}  
+Input signal frequency: 1 MHz\\
+Signal without rectifying\\
+$Vpp = 1.5778\text{ }V$\\
+Signal after rectifying\\
+$Vpp = 97.51\text{ }mV$\\
+\end{minipage}
+%-------------------
+\\\\
+\textbf{Schottky diode: Infineon BAT6302}\\\\
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Infinion/RF1MHz.png}  
+Input signal frequency: 1 MHz\\
+Signal without rectifying\\
+$Vpp = 596\text{ }mV$\\
+Signal after rectifying\\
+$Vpp = 69.6\text{ }mV$\\
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Infinion/RF5MHz.png}  
+Input signal frequency: 5 MHz\\
+Signal without rectifying\\
+$Vpp = 558\text{ }mV$\\
+Signal after rectifying\\
+$Vpp = 47.8\text{ }mV$\\
+\end{minipage}
+\\
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Infinion/RF10MHz.png}  
+Input signal frequency: 10 MHz\\
+Signal without rectifying\\
+$Vpp = 542\text{ }mV$\\
+Signal after rectifying\\
+$Vpp = 25.088\text{ }mV$\\
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Infinion/RF20MHz.png}  
+Input signal frequency: 20 MHz\\
+Signal without rectifying\\
+$Vpp = 429.24\text{ }mV$\\
+Signal after rectifying\\
+$Vpp = 20.139\text{ }mV$\\
+\end{minipage}
+\\
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Infinion/RF50MHz.png}  
+Input signal frequency: 50 MHz\\
+Signal without rectifying\\
+$Vpp = 490\text{ }mV$\\
+Signal after rectifying\\
+$Vpp = 25.284\text{ }mV$\\
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/Infinion/RF100MHz.png}  
+Input signal frequency: 100 MHz\\
+Signal without rectifying\\
+$Vpp = 201.88\text{ }mV$\\
+Signal after rectifying\\
+$Vpp = 66\text{ }mV$\\
+\end{minipage}
+\begin{minipage}[b]{0.48\linewidth}
+The infenion BAT6302 schottky diode DC voltage was measured for different power level of the RF signal at different frequency.\\
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\linewidth}
+%\centering
+\includegraphics[width=6.7cm]{Images/75.png} 
+%\caption{Measurement results of infenion BAT6302 schottky diode}
+\end{minipage}
+%\begin{figure}[H]
+%%\begin{subfigure}
+%	\centering
+%   \includegraphics[height=5cm]{Images/75.png} 
+%   \caption{Measurement results of infenion BAT6302 schottky diode}
+%   %\end{subfigure}
+%\end{figure} 
+\section{Electron beam lithography patterns}
+\indent\indent\indent After calibrating the parameters of the thin-film deposition of PMN-PT, FeGa, we need to see the domain formation and other properties of the PMN-PT and FeGa in nanostructures. The aim is to produce single-domain nanomagnets of different thicknesses.\\
+The deposition will be done on a silicon substrate of $3\times 1.5 \text{ mm}$. There will be 30, $100 \times 100 $ $\mu m$ boxes, inside which there will be nanostructures of different shapes and sizes.
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[height=4cm]{Images/69.png} 
+   \caption{EBL patterns on $3\text{ mm} \times 1.5$ mm Si substrate.}
+   %\end{subfigure}
+\end{figure}
+For \textbf{FeGa},in total, there will be three different thicknesses in between 1 to 2 nm\\
+For each thickness, there are elliptical and circular structures. The reason behind elliptical structures is to stabilize the nanomagnets in case of in-plane magnetic anisotropy, and the circular structures will stabilize in case of perpendicular anisotropy.
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=10cm]{Images/68.png} 
+   \caption{Circular and elliptical EBL patterns.}
+   %\end{subfigure}
+\end{figure}  
+Here, FeGa with 1 nm thickness structures is expected to reflect perpendicular magnetic anisotropy and 2 nm thickness, which will reflect in-plane magnetic anisotropy. However, for each thickness, both structures are included because it is not sure at what thickness anisotropy comes into play, so for a comparative study, both the structures are included. Except for nanostructures, there is also a large circular structure of 100 um diameter to form a multidomain magnet.
+The structure shape and sizes are\\
+\textbf{Elliptical} (all numbers are in nm)\\
+$250\times200$, $200\times150$, $150\times100$, $110\times50$\\\\
+\textbf{Circular} (all numbers are in nm)(diameter)\\
+50, 75, 100, 125, 150
+\section{Sputtering deposition}
+\indent\indent\indent Before fabricating the device, it is needed to calibrate the parameters of the magnetostrictive and piezoelectric material, such as damping parameter $\alpha$, dielectric coefficient and so on.
+Kapton can be used as a substrate for the thin film since it is flexible and can endure high temperatures. PMN-PT is used for piezoelectric and for magnetostrictive material, FeGa.\\
+All deposition is from the substrate side, and all the numbers inside the bracket are the nominal thickness in nm.\\\\
+Thin-film 1\\
+Kapton/PMN-PT (25, 50, 75, 100)\\
+From this thin film, for different thicknesses of PMN-PT, the $d_{33}$, Young's modulus, and Poisson ratio can be calculated.\\\\
+Thin-film 2\\
+Kapton/PMN-PT (25, 50, 75, 100)/FeGa(0.8, 1, 1.5, 1.7, 2, 5, 10, 20, 50, 100)\\
+From this thin film, for different thicknesses of PMN-PT and FeGa, the damping parameter $\alpha$ can be calibrated by obtaining the MH hysteresis, the saturation magnetization, and the coercive field is calculated.\\\\
+Thin-film 3\\
+Kapton/PMN-PT(50)/FeGa(2)/$Al_2O_3$(40)/CoFeB(2)MgO(0.8)/CoFeB(2)/\\Ta(5)/Ru(5)/Cr or Au\\
+This thin film suggests the entire stack, which can be used as one single neuron. Here we have the multiferroic, and on top of that, we have the read/write measuring unit.\\\\
+Thin-film 4\\
+Kapton/PMN-PT(50)/FeGa(2)/MgO(0.8)/CoFeB(2)/Ta(5)/Ru(5)/Cr or Au\\
+This thin film is a modification of the thin-film 3, and here it is tried to get the TMR property in between FeGa and CoFeB using a MgO spacer, thereby reducing the stack into a compact version.\\\\
+Thin-film 5\\
+Kapton/PMN-PT(50)/FeGa(2)/MgO(0.8)/CoFeB(2)\\
+This thin film is the same as Thin-film 4, except for the outer metallic contact layer to visualize the magnetization of the top CoFeB layer by MFM.
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=13cm]{Images/52.png} 
+   \caption{Sputtering deposition of thin-films.}
+   %\end{subfigure}
+\end{figure}
+
+\pagebreak
+\section{Neuromorphic devices using multiferroics}
+\indent \indent\indent We plan to use multiferroics and tunnelling junction for neuromorphic device architecture. The multiferroics part will deal with summation of input and activation function, and the tunnelling junction will deal with weight and the output of the neuron.
+\subsection{Device architecture} 
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=13cm]{Images/56.png} 
+   \caption{Hardware architecture of a single neuron.}
+   %\end{subfigure}
+\end{figure}
+\indent\indent A single neuron of the device consists of the piezoelectric layer, on top of which there are many pillars. These pillars are made up of magnetostrictive material, and on top of the magnetostrictive material, there is a tri-layer exhibiting the TMR. The pillars are of different areas. The inputs are fed at the piezoelectric layer, and this generates the strain, which is transferred to the magnetostrictive nanomagnets present in the pillars. The stress anisotropy in the magnetostrictive material affects the energy barrier of the tri-layer magnet, causing parallel and anti-parallel orientation. In this architecture, the piezoelectric material serves the purpose of summation block, as if two voltage inputs are given, it will generate strain based on the two inputs~\cite{roy13x}. The tri-layer serves the purpose of the weight of edges. Therefore as many neurons are connected to this neuron, that many numbers of pillars will be there on the piezoelectric material~\cite{roy15_1}.
+
+\begin{figure}[H]
+%\begin{subfigure}
+	\centering
+   \includegraphics[width=13cm]{Images/57.png} 
+   \caption{Neuromorphic hardware architecture of a full neural network.}
+   %\end{subfigure}
+\end{figure}
+\indent\indent In the Figure 2.21, the neural network hardware architecture is compared with an abstract neural network. The abstract network has one neuron in the input layer, two hidden neurons in the hidden layer, and two in the output layer. All the edges connecting to the neurons have weight $W_1, W_2, W_3, W_4, W_5, W_6$. $X_1$ is the input given to the network, and $Y_1$ and $Y_2$ are the network's output.
+The weight are encoded inside the read/write unit or the blue pillars.
+\subsection{Multiferroics}
+\indent \indent\indent For a thin-film deposition, we have chosen lead magnesium niobate-lead titanate (PMN-PT) as piezoelectric material and iron-galium (FeGa) as magnetostrictive material~\cite{ RefWorks:806}. FeGa is deposited on PMN-PT. A voltage of 50 mV is applied across the deposition. It creates strain on the piezoelectric material~\cite{anton,roy14_6}.
+\[\epsilon_{piezo}=d_{piezo}\times \frac{V_{in}}{t_{piezo}}\]
+where $d_{piezo}$=3000 pm/V for PMN-PT, $t_{piezo}$=100 nm~\cite{roy_spie_2014}.
+The strain is elestically transfered to the magnetostrictive material. 
+\[\epsilon_{mag}=\epsilon_{piezo}\] 
+This creates stress anisotropy in the FeGa layer, stress, $\sigma=Y\epsilon_{mag}$, Young's modulus of FeGa, Y=$250\times 10^9 \text{ Pa}$, and $\frac{3}{2}\lambda=150\times10^{-6}$
+\[\text{Stress anisotropy (FeGa)}=\frac{3}{2}\lambda \sigma \Omega cos^2 \theta=2.4 \times 10^{-18} J\]
+\subsection{Read unit using tunnel junctions}
+\indent \indent\indent The stress anisotropy generated from the PMN-PT/FeGa multilayer should be able to reduce the energy barrier of the tri-magnetic layer exhibiting the TMR, for magnetization switching. As a result, parallel and anti-parallel orientation in the tri-layer is possible~\cite{kilby}.\\
+The resistance area product of the parallel orientation of a TMR,
+\[R_PA=175 \; k\Omega \mu m^2\]
+$R_P$ is the resistance of TMR when both the magnets are in the parallel direction, and the desired TMR value is 300\%~\cite{RefWorks:33}.
+\[TMR=\frac{R_{AP}}{R_P}-1\]
+Hence $R_{AP}=4R_P$
+\[R_{AP}A=700 \; k\Omega \mu m^2\] 
+If a constant current, $I_{read}=1 \text{ nA}$ is given to the TMR of area 100 nm $\times$ 100 nm
+\[V_P=I_{read}\cdot \frac{R_PA}{A}=17.5 mV\]
+\[V_{AP}=I_{read}\cdot \frac{R_{AP}A}{A}=70 mV\]
+That is to make the TMR in parallel orientation, 17.5 mV is required and to make anti-parallel orientation, 70 mV is required.\\
+We can encapsulate, $V_P=17.5 mV$ as weight,W = 0 and $V_P=70.0 mV$ as W = 1. It does not necessarily have to be parallel or anti-parallel orientation, i.z. the angle between the free and the fixed layer magnetization, $\theta_f$ should not always be $0^o$ or $180^0$. It can also be $0^0$ and $90^0$, or $180^0$ and $90^0$.
+\[G(\theta_f)=G_{90^0}(1-\eta cos \theta_f)\]
+where G denotes the conductance and 
+\[\eta=\frac{G_P-G_{AP}}{G_P+G_{AP}}\]
+$G_{AP}=G(180^0)$ and $G_{P}=G(0^0)$\\
+\[TMR=\frac{G_P-G_{AP}}{G_{AP}}\]
+Hence, $\eta$ can be expressed as
+\[\eta=\frac{TMR}{TMR+2}\]
+if $\theta_f=0^0 or 180^0$, $G(\theta_f)=G_{90^0}(1-\eta)$\\
+and if $\theta_f=90^0$, $G(\theta_f)=G_{90^0}$\\\\
+We can encapsulate,\\$\theta_f=90^0$ as W=0, and\\
+$\theta_f=0^0$ or $180^0$ as W=1.
+
+ 
+\chapter{Discussions and Conclusions} \label{ch: conclusions}
+\indent\indent\indent From the results of the character recognition model it is seen that increasing the number of neurons in the hidden layer or the hidden layer itself will not give good accuracy. And from the predicted results of the model it is seen that adding more noises to the data causes malfunction of the model and gives bad accuracy.\\   
+\indent\indent From the magnetic thermal annealing of the MgO(0.8)/CoFeB(10) (the numbers are in nm) sample, it is seen that the M-H area after MTA is 18.5 times more than before MTA. This reflects that the structural imperfection of the MgO/CoFeB sample, which was deteriorating the overall magnetization, is removed—giving rise to higher magnetization in the easy axis of the sample.\\
+\indent\indent To achieve massive parallel processing like in the human brain, mimicking the brain's neural architecture is the ultimate solution for neuromorphic computing. Choosing PMN-PT and FeGa for the multiferroic composite layer makes the device energy-efficient. Moreover, the perpendicular anisotropy of the magnetic layers can reduce the lateral dimension to accommodate more number of nanopillars in a given of area.\\
+\indent \indent The design of the neuromorphic hardware are based on realistic parameters and are feasible to do produce this device which would provide low energy neuromorphic computing.
+\section{Future plans}
+\indent \indent \indent The thickness dependence of material parameters for piezoelectric and magnetostrictive layers need to be calibrated. The perpendicular anisotropy formed between the interface of the two magnetic layers requires calibration. Calibration of the PMN-PT/FeGa interface is required. We need to check the read/write unit formation between CoFeB/MgO/FeGa.\\
+\indent \indent Once all the calibration of the thin-film sample is done. EBL sputtering will be carried out based on the EBL patterns from where deposition and characterization of nanomagnets will be done. The nanomagnets need to be characterized for domain formation, magnetic anisotropy, and dipole coupling effect. The area dependence of read/write unit for weights needs to be calibrated and based on the calibration data, the EBL patterning needs to be done. After calibration and characterization, the final deposition of the neuron will be done, which will be connected to other neurons using multi-levels of lithography. 
+% -----------------------------
+%\section{Observations}
+
+
+
+% -----------------------------
+%\begin{appendices}
+%\renewcommand{\thesection}{\Roman{section}}
+%\section{Basic Definitions}
+%
+%This is the first section of the appendix.
+%
+%\section{Additional Theorems}
+%
+%This is the second section of the appendix.
+%
+%\end{appendices}
+% -----------------------------
+\bibliographystyle{plain}
+\bibliography{mybib}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document}

@@ -1,0 +1,73 @@
+\contentsline {chapter}{Certificate}{i}{section*.2}% 
+\contentsline {chapter}{Academic Integrity and Copyright Disclaimer}{ii}{section*.3}% 
+\contentsline {chapter}{Acknowledgement}{iii}{section*.4}% 
+\contentsline {chapter}{Abstract}{iv}{section*.5}% 
+\contentsline {chapter}{List of Symbols or Abbreviations}{v}{section*.6}% 
+\contentsline {chapter}{List of Figures}{vi}{section*.7}% 
+\contentsline {chapter}{\numberline {1.}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Artifical Neural Networks}{2}{section.1.1}% 
+\contentsline {subsection}{\numberline {1.1.1}Architecture}{3}{subsection.1.1.1}% 
+\contentsline {subsection}{\numberline {1.1.2}Activation function}{4}{subsection.1.1.2}% 
+\contentsline {subsection}{\numberline {1.1.3}Forward propagation}{5}{subsection.1.1.3}% 
+\contentsline {subsection}{\numberline {1.1.4}Gradient descent}{6}{subsection.1.1.4}% 
+\contentsline {subsection}{\numberline {1.1.5}Backpropagation}{7}{subsection.1.1.5}% 
+\contentsline {section}{\numberline {1.2}Character recognition system using neural network}{9}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}Neural architecture}{10}{subsection.1.2.1}% 
+\contentsline {section}{\numberline {1.3}Neural network using spintronics}{11}{section.1.3}% 
+\contentsline {subsection}{\numberline {1.3.1}Magnetic anisotropy}{12}{subsection.1.3.1}% 
+\contentsline {subsection}{\numberline {1.3.2}Magnetic field along in-plane: easy and hard axis}{13}{subsection.1.3.2}% 
+\contentsline {subsection}{\numberline {1.3.3}Perpendicular Magnetic Anisotropy}{16}{subsection.1.3.3}% 
+\contentsline {subsection}{\numberline {1.3.4}Magnetostriction}{18}{subsection.1.3.4}% 
+\contentsline {subsection}{\numberline {1.3.5}Multiferroics and Multiferroic Composites}{19}{subsection.1.3.5}% 
+\contentsline {subsection}{\numberline {1.3.6}Giant Magnetoresistance}{20}{subsection.1.3.6}% 
+\contentsline {subsection}{\numberline {1.3.7}Tunnelling Magnetoresistance}{21}{subsection.1.3.7}% 
+\contentsline {section}{\numberline {1.4}Magnetic Thermal Annealing}{23}{section.1.4}% 
+\contentsline {section}{\numberline {1.5}Ferro-magnteic Resonance}{24}{section.1.5}% 
+\contentsline {section}{\numberline {1.6}Electron Beam Lithography}{27}{section.1.6}% 
+\contentsline {section}{\numberline {1.7}Atomic Force Microscopy}{28}{section.1.7}% 
+\contentsline {section}{\numberline {1.8}Vibrating Sample Magnetometer}{29}{section.1.8}% 
+\contentsline {section}{\numberline {1.9}X-ray Diffraction }{30}{section.1.9}% 
+\contentsline {section}{\numberline {1.10}X-ray Reflectivity}{30}{section.1.10}% 
+\contentsline {section}{\numberline {1.11}Signal generator: R\&S SMB100A}{32}{section.1.11}% 
+\contentsline {section}{\numberline {1.12}Power supply: R\&S NGL202}{32}{section.1.12}% 
+\contentsline {section}{\numberline {1.13}Spectrum analyzer: R\&S Spectrum rider FPH}{33}{section.1.13}% 
+\contentsline {section}{\numberline {1.14}Source Measuring Unit: Keithly 2450}{33}{section.1.14}% 
+\contentsline {section}{\numberline {1.15}Lock-in amplifier: SRS SR830}{34}{section.1.15}% 
+\contentsline {section}{\numberline {1.16}Probe station}{34}{section.1.16}% 
+\contentsline {section}{\numberline {1.17}Oscilloscope}{35}{section.1.17}% 
+\contentsline {section}{\numberline {1.18}Other experimental apparatus}{36}{section.1.18}% 
+\contentsline {subsection}{\numberline {1.18.1}Spin coater}{36}{subsection.1.18.1}% 
+\contentsline {subsection}{\numberline {1.18.2}Shaker}{36}{subsection.1.18.2}% 
+\contentsline {subsection}{\numberline {1.18.3}Hot plate}{37}{subsection.1.18.3}% 
+\contentsline {subsection}{\numberline {1.18.4}Ultrasonic cleaner}{37}{subsection.1.18.4}% 
+\contentsline {subsection}{\numberline {1.18.5}Hot air oven}{38}{subsection.1.18.5}% 
+\contentsline {subsection}{\numberline {1.18.6}Rota mantle}{38}{subsection.1.18.6}% 
+\contentsline {subsection}{\numberline {1.18.7}Nitrogen gun}{39}{subsection.1.18.7}% 
+\contentsline {subsection}{\numberline {1.18.8}Vacuum desiccator}{39}{subsection.1.18.8}% 
+\contentsline {subsection}{\numberline {1.18.9}Muffle furnace}{40}{subsection.1.18.9}% 
+\contentsline {subsection}{\numberline {1.18.10}Fume hood}{40}{subsection.1.18.10}% 
+\contentsline {chapter}{\numberline {2.}Results}{42}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Character recognition system using neural network}{42}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}Neural architecture modeling}{42}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Model output}{44}{subsection.2.1.2}% 
+\contentsline {section}{\numberline {2.2}Improvement of magnetization using magnetic thermal annealing}{45}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Development of LabView environment for different instruments}{46}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Power supply}{46}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Electromagnet}{48}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}Signal generator}{48}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Spectrum analyzer}{49}{subsection.2.3.4}% 
+\contentsline {subsection}{\numberline {2.3.5}Lock-in amplifier}{49}{subsection.2.3.5}% 
+\contentsline {section}{\numberline {2.4}Development of ferromagnetic resonance system}{50}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Characteristic impedance of coaxial cable}{51}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Measurement of loss in the coaxial cable, connectors and the waveguide}{52}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}FMR result}{54}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.4}Schottky diode measurement results}{54}{subsection.2.4.4}% 
+\contentsline {section}{\numberline {2.5}Electron beam lithography patterns}{58}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Sputtering deposition}{59}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Neuromorphic devices using multiferroics}{61}{section.2.7}% 
+\contentsline {subsection}{\numberline {2.7.1}Device architecture}{61}{subsection.2.7.1}% 
+\contentsline {subsection}{\numberline {2.7.2}Multiferroics}{62}{subsection.2.7.2}% 
+\contentsline {subsection}{\numberline {2.7.3}Read unit using tunnel junctions}{63}{subsection.2.7.3}% 
+\contentsline {chapter}{\numberline {3.}Discussions and Conclusions}{65}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Future plans}{66}{section.3.1}% 
+\contentsline {chapter}{Bibliography}{71}{chapter*.71}% 

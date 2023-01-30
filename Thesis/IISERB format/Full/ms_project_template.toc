@@ -1,0 +1,77 @@
+\contentsline {chapter}{Certificate}{i}% 
+\contentsline {chapter}{Academic Integrity and Copyright Disclaimer}{ii}% 
+\contentsline {chapter}{Acknowledgement}{iii}% 
+\contentsline {chapter}{Abstract}{iv}% 
+\contentsline {chapter}{List of Symbols or Abbreviations}{v}% 
+\contentsline {chapter}{List of Figures}{vi}% 
+\contentsline {chapter}{List of Tables}{vii}% 
+\contentsline {chapter}{\numberline {1.}Introduction}{1}% 
+\contentsline {section}{\numberline {1.1}Artifical Neural Network (ANN)}{2}% 
+\contentsline {subsection}{\numberline {1.1.1}Architecture}{3}% 
+\contentsline {subsection}{\numberline {1.1.2}Activation Function}{4}% 
+\contentsline {subsection}{\numberline {1.1.3}Forward Propagation}{4}% 
+\contentsline {subsection}{\numberline {1.1.4}Gradient Descent}{5}% 
+\contentsline {subsection}{\numberline {1.1.5}Backpropagation}{6}% 
+\contentsline {section}{\numberline {1.2}Character Recognition Model}{6}% 
+\contentsline {subsection}{\numberline {1.2.1}Neural Architecture}{7}% 
+\contentsline {section}{\numberline {1.3}EBL}{7}% 
+\contentsline {section}{\numberline {1.4}Neural Network using Spintronics}{7}% 
+\contentsline {subsection}{\numberline {1.4.1}Magnetic Anisotropy}{7}% 
+\contentsline {subsection}{\numberline {1.4.2}Magnetic Field along in-plane: Easy and Hard axis}{8}% 
+\contentsline {subsection}{\numberline {1.4.3}Perpendicular Magnetic Anisotropy}{11}% 
+\contentsline {subsection}{\numberline {1.4.4}Magnetostriction}{12}% 
+\contentsline {subsection}{\numberline {1.4.5}Multiferroics and Multiferroic Composites}{13}% 
+\contentsline {subsection}{\numberline {1.4.6}Giant Magneto Resistance (GMR)}{14}% 
+\contentsline {subsection}{\numberline {1.4.7}Tunnelling Magneto Resistance (TMR)}{15}% 
+\contentsline {section}{\numberline {1.5}Magnetic Thermal Annealing}{16}% 
+\contentsline {subsection}{\numberline {1.5.1}Magnetic Thermal Annealing experimental system}{17}% 
+\contentsline {section}{\numberline {1.6}Ferro-magnteic Resonance (FMR)}{18}% 
+\contentsline {section}{\numberline {1.7}Magnetic Force Microscopy (MFM)}{20}% 
+\contentsline {section}{\numberline {1.8}Vibrating Sample Magnetometer (VSM)}{20}% 
+\contentsline {section}{\numberline {1.9}X-ray Diffraction (XRD)}{20}% 
+\contentsline {section}{\numberline {1.10}X-ray Reflectivity (XRR)}{20}% 
+\contentsline {section}{\numberline {1.11}Strain-gauge}{20}% 
+\contentsline {section}{\numberline {1.12}Stress-strain Testing Machine}{20}% 
+\contentsline {section}{\numberline {1.13}Proposed Device}{20}% 
+\contentsline {section}{\numberline {1.14}Experimental Apparatus}{20}% 
+\contentsline {subsection}{\numberline {1.14.1}Spin Coater}{20}% 
+\contentsline {subsection}{\numberline {1.14.2}Shaker}{21}% 
+\contentsline {subsection}{\numberline {1.14.3}Hot Plate}{21}% 
+\contentsline {subsection}{\numberline {1.14.4}Ultrasonic Cleaner}{22}% 
+\contentsline {subsection}{\numberline {1.14.5}Hot Air Oven}{22}% 
+\contentsline {subsection}{\numberline {1.14.6}Rota Mantle}{22}% 
+\contentsline {subsection}{\numberline {1.14.7}Nitrogrn Gun}{23}% 
+\contentsline {subsection}{\numberline {1.14.8}Vacuum Desiccator}{23}% 
+\contentsline {subsection}{\numberline {1.14.9}Muffle Furnace}{24}% 
+\contentsline {subsection}{\numberline {1.14.10}Fume Hood}{24}% 
+\contentsline {subsection}{\numberline {1.14.11}Source Measuring Unit (SMU)}{24}% 
+\contentsline {subsection}{\numberline {1.14.12}Power Supply}{25}% 
+\contentsline {subsection}{\numberline {1.14.13}Probe Station}{25}% 
+\contentsline {subsection}{\numberline {1.14.14}Oscilloscope}{25}% 
+\contentsline {section}{\numberline {1.15}LabView measurement automation}{25}% 
+\contentsline {chapter}{\numberline {2.}Results}{26}% 
+\contentsline {section}{\numberline {2.1}Character recognition system using neural network}{27}% 
+\contentsline {section}{\numberline {2.2}Improvement of magnetization using magnetic thermal annealing}{27}% 
+\contentsline {section}{\numberline {2.3}Development of LabView environment for different instruments}{27}% 
+\contentsline {subsection}{\numberline {2.3.1}Electromagnet}{27}% 
+\contentsline {subsection}{\numberline {2.3.2}Signal generator}{27}% 
+\contentsline {subsection}{\numberline {2.3.3}Spectrum analyzer}{27}% 
+\contentsline {subsection}{\numberline {2.3.4}Lock-in amplifier}{27}% 
+\contentsline {subsection}{\numberline {2.3.5}Power supply}{27}% 
+\contentsline {section}{\numberline {2.4}Development of Ferromagnetic resonance system}{27}% 
+\contentsline {subsection}{\numberline {2.4.1}Characteristic impedance of coaxial cable}{27}% 
+\contentsline {subsection}{\numberline {2.4.2}Characteristic impedance of waveguide}{27}% 
+\contentsline {subsection}{\numberline {2.4.3}Voltage and current measurement through coaxial cable}{27}% 
+\contentsline {subsection}{\numberline {2.4.4}Measurement of loss in the coaxial cable, connectors and the waveguide}{28}% 
+\contentsline {subsection}{\numberline {2.4.5}Schootky diode measurement results}{28}% 
+\contentsline {section}{\numberline {2.5}Sputtering deposition}{28}% 
+\contentsline {section}{\numberline {2.6}EBL patterning}{28}% 
+\contentsline {section}{\numberline {2.7}Neuromorphic devices using multiferroics}{28}% 
+\contentsline {subsection}{\numberline {2.7.1}Multiferroics}{28}% 
+\contentsline {subsection}{\numberline {2.7.2}Read unit using tunnelling junctions}{28}% 
+\contentsline {chapter}{\numberline {3.}Conclusions and discussions}{29}% 
+\contentsline {section}{\numberline {3.1}Observations}{29}% 
+\contentsline {chapter}{Appendices}{30}% 
+\contentsline {section}{\numberline {I}Basic Definitions}{31}% 
+\contentsline {section}{\numberline {II}Additional Theorems}{31}% 
+\contentsline {chapter}{Bibliography}{31}% 

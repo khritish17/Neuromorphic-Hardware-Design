@@ -1,0 +1,1169 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.14)  28 APR 2022 00:32
+entering extended mode
+**./Thesis.tex
+(Thesis.tex
+LaTeX2e <2018-12-01>
+(thesis.cls
+Document Class: thesis 1996/25/01 1.0g LaTeX document class (wm).
+\hours=\count80
+\minutes=\count81
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk12.clo"
+File: bk12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count82
+\c@chapter=\count83
+\c@section=\count84
+\c@subsection=\count85
+\c@subsubsection=\count86
+\c@paragraph=\count87
+\c@subparagraph=\count88
+\beforechaptervspace=\skip41
+\afterchaptervspace=\skip42
+\exampleindent=\skip43
+\c@figure=\count89
+\c@table=\count90
+\abovecaptionskip=\skip44
+\belowcaptionskip=\skip45
+\bibindent=\dimen102
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+)) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip10
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks15
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks19
+\thm@bodyfont=\toks20
+\thm@headfont=\toks21
+\thm@notefont=\toks22
+\thm@headpunct=\toks23
+\thm@preskip=\skip49
+\thm@postskip=\skip50
+\thm@headsep=\skip51
+\dth@everypar=\toks24
+) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.st
+y"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
+"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspace.sty
+"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty
+"
+Package: hyperref 2019/06/12 v6.88h Hypertext links for LaTeX
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyp
+erref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobsub-gen
+eric.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.s
+ty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.st
+y"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen112
+\Hy@linkcounter=\count103
+\Hy@pagecounter=\count104
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2019/06/12 v6.88h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count105
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg
+"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4550.
+Package hyperref Info: Link nesting OFF on input line 4555.
+Package hyperref Info: Hyper index ON on input line 4558.
+Package hyperref Info: Plain pages OFF on input line 4565.
+Package hyperref Info: Backreferencing OFF on input line 4570.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4803.
+\c@Hy@tempcnt=\count106
+ ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5156.
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count107
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+Package hyperref Info: Hyper figures OFF on input line 6411.
+Package hyperref Info: Link nesting OFF on input line 6416.
+Package hyperref Info: Hyper index ON on input line 6419.
+Package hyperref Info: backreferencing OFF on input line 6426.
+Package hyperref Info: Link coloring OFF on input line 6431.
+Package hyperref Info: Link coloring with OCG OFF on input line 6436.
+Package hyperref Info: PDF/A mode OFF on input line 6441.
+LaTeX Info: Redefining \ref on input line 6481.
+LaTeX Info: Redefining \pageref on input line 6485.
+\Hy@abspage=\count108
+\c@Item=\count109
+\c@Hfootnote=\count110
+)
+Package hyperref Info: Driver: hpdftex.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2019/06/12 v6.88h Hyperref driver for pdfTeX
+\Fld@listcount=\count111
+\c@bookmark@seq@number=\count112
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunfileche
+ck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip52
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen116
+\captionmargin=\dimen117
+\caption@leftmargin=\dimen118
+\caption@rightmargin=\dimen119
+\caption@width=\dimen120
+\caption@indent=\dimen121
+\caption@parindent=\dimen122
+\caption@hangindent=\dimen123
+Package caption Info: thesis document class detected.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption-thesi
+s.sto"
+File: caption-thesis.sto 2020/08/22 v2.0 Adaption of the caption package to the
+ thesis document class (AR)
+))
+\c@caption@flags=\count113
+\c@continuedfloat=\count114
+Package caption Info: hyperref package is loaded.
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.st
+y"
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count115
+\c@subtable=\count116
+) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count117
+\float@exts=\toks26
+\float@box=\box29
+\@float@everytoks=\toks27
+\@floatcapt=\box30
+) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.s
+ty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty
+"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics
+.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.d
+ef"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf.sty
+"
+Package: epstopdf 2016/05/15 v2.6 Conversion with epstopdf on the fly (HO)
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-bas
+e.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+))
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/appendix\appendix.sty
+"
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count118
+\c@@ppsavesec=\count119
+\c@@ppsaveapp=\count120
+)
+
+Package amsthm Warning: Unknown theoremstyle `thm' on input line 46.
+
+\c@thm=\count121
+(Thesis.aux)
+\openout1 = `Thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+\AtBeginShipoutBox=\box31
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cf
+g"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+Package hyperref Info: Link coloring ON on input line 117.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gettitlest
+ring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count122
+)
+LaTeX Info: Redefining \ref on input line 117.
+LaTeX Info: Redefining \pageref on input line 117.
+LaTeX Info: Redefining \nameref on input line 117.
+ (Thesis.out) (Thesis.out)
+\@outlinefile=\write3
+\openout3 = `Thesis.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.
+mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count123
+\scratchdimen=\dimen126
+\scratchbox=\box32
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen127
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks29
+)
+<iiser_b.png, id=290, 529.98pt x 529.98pt>
+File: iiser_b.png Graphic file (type png)
+<use iiser_b.png>
+Package pdftex.def Info: iiser_b.png  used on input line 118.
+(pdftex.def)             Requested size: 105.99411pt x 105.99411pt.
+ [1
+
+
+{C:/Users/HP/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./iiser_b.png
+
+pdfTeX warning: pdflatex (file ./iiser_b.png): large interlaced PNG might cause
+ out of memory (use non-interlaced PNG to fix this)
+>]
+LaTeX Font Info:    Try loading font information for U+msa on input line 134.
+ ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 134.
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (10.24622pt too wide) in paragraph at lines 134--143
+ [] 
+ []
+
+[1]
+Underfull \hbox (badness 10000) in paragraph at lines 148--151
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
+
+ []
+
+[3] [4] [5] [6] (Thesis.lof [7
+
+])
+\tf@lof=\write4
+\openout4 = `Thesis.lof'.
+
+ [8] [9] (Thesis.toc [10
+
+] [11])
+\tf@toc=\write5
+\openout5 = `Thesis.toc'.
+
+ [12]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--241
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.241 
+       [1
+
+]
+<Images/30.png, id=537, 457.71pt x 276.28218pt>
+File: Images/30.png Graphic file (type png)
+<use Images/30.png>
+Package pdftex.def Info: Images/30.png  used on input line 244.
+(pdftex.def)             Requested size: 256.31586pt x 154.71695pt.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 248--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--261
+
+ []
+
+[3 <./Images/30.png>]
+<Images/35.png, id=548, 518.6878pt x 214.55156pt>
+File: Images/35.png Graphic file (type png)
+<use Images/35.png>
+Package pdftex.def Info: Images/35.png  used on input line 270.
+(pdftex.def)             Requested size: 290.46318pt x 120.14804pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
+
+ []
+
+[4 <./Images/35.png>]
+<Images/34.png, id=558, 584.1825pt x 85.82062pt>
+File: Images/34.png Graphic file (type png)
+<use Images/34.png>
+Package pdftex.def Info: Images/34.png  used on input line 303.
+(pdftex.def)             Requested size: 327.13995pt x 48.0592pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--309
+
+ []
+
+[5 <./Images/34.png>] [6]
+<Images/38.png, id=570, 643.6547pt x 103.13531pt>
+File: Images/38.png Graphic file (type png)
+<use Images/38.png>
+Package pdftex.def Info: Images/38.png  used on input line 341.
+(pdftex.def)             Requested size: 360.44417pt x 57.75536pt.
+ [7 <./Images/38.png>] [8]
+<Images/39.png, id=580, 399.74344pt x 362.85562pt>
+File: Images/39.png Graphic file (type png)
+<use Images/39.png>
+Package pdftex.def Info: Images/39.png  used on input line 378.
+(pdftex.def)             Requested size: 223.85478pt x 203.19775pt.
+ [9] [10 <./Images/39.png>]
+[11]
+<Images/19.png, id=608, 169.38281pt x 164.86594pt>
+File: Images/19.png Graphic file (type png)
+<use Images/19.png>
+Package pdftex.def Info: Images/19.png  used on input line 400.
+(pdftex.def)             Requested size: 94.85371pt x 92.32428pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
+
+ []
+
+<Images/20.png, id=609, 496.85625pt x 280.04625pt>
+File: Images/20.png Graphic file (type png)
+<use Images/20.png>
+Package pdftex.def Info: Images/20.png  used on input line 409.
+(pdftex.def)             Requested size: 278.2376pt x 156.82481pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--411
+
+ []
+
+[12 <./Images/19.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 417--423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--423
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--423
+
+ []
+
+[13 <./Images/20.png>]
+<Images/21.png, id=621, 517.935pt x 270.25969pt>
+File: Images/21.png Graphic file (type png)
+<use Images/21.png>
+Package pdftex.def Info: Images/21.png  used on input line 427.
+(pdftex.def)             Requested size: 290.04161pt x 151.34438pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--429
+
+ []
+
+[14 <./Images/21.png>]
+<Images/22.png, id=627, 426.09187pt x 174.6525pt>
+File: Images/22.png Graphic file (type png)
+<use Images/22.png>
+Package pdftex.def Info: Images/22.png  used on input line 442.
+(pdftex.def)             Requested size: 238.60982pt x 97.80472pt.
+<Images/23.png, id=629, 374.90062pt x 158.09062pt>
+File: Images/23.png Graphic file (type png)
+<use Images/23.png>
+Package pdftex.def Info: Images/23.png  used on input line 448.
+(pdftex.def)             Requested size: 209.94292pt x 88.53014pt.
+ [15 <./Images/22.png> <./Images/23.png>]
+<Images/24.png, id=637, 444.15938pt x 267.24844pt>
+File: Images/24.png Graphic file (type png)
+<use Images/24.png>
+Package pdftex.def Info: Images/24.png  used on input line 463.
+(pdftex.def)             Requested size: 248.72754pt x 149.6581pt.
+ [16 <./Images/24.png>]
+<Images/18.png, id=643, 313.17pt x 275.52937pt>
+File: Images/18.png Graphic file (type png)
+<use Images/18.png>
+Package pdftex.def Info: Images/18.png  used on input line 474.
+(pdftex.def)             Requested size: 175.374pt x 154.29538pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--486
+
+ []
+
+[17 <./Images/18.png>]
+<Images/25.png, id=655, 550.30594pt x 392.21532pt>
+File: Images/25.png Graphic file (type png)
+<use Images/25.png>
+Package pdftex.def Info: Images/25.png  used on input line 493.
+(pdftex.def)             Requested size: 308.16922pt x 219.63907pt.
+ [18]
+<Images/26.png, id=666, 417.05812pt x 234.8775pt>
+File: Images/26.png Graphic file (type png)
+<use Images/26.png>
+Package pdftex.def Info: Images/26.png  used on input line 504.
+(pdftex.def)             Requested size: 233.55095pt x 131.5305pt.
+ [19 <./Images/25.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 507--511
+
+ []
+
+[20 <./Images/26.png>]
+<Images/27.png, id=691, 752.8125pt x 274.77657pt>
+File: Images/27.png Graphic file (type png)
+<use Images/27.png>
+Package pdftex.def Info: Images/27.png  used on input line 525.
+(pdftex.def)             Requested size: 421.57211pt x 153.87381pt.
+
+Overfull \hbox (31.57211pt too wide) in paragraph at lines 525--526
+ [][] 
+ []
+
+[21] [22 <./Images/27.png>] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 550--552
+
+ []
+
+[24]
+Overfull \hbox (44.39412pt too wide) in paragraph at lines 572--573
+[]\OT1/cmr/m/n/12 Then the ex-posed sam-ple is placed in-side the de-vel-oper s
+o-lu-tion (IPA:MIBK=3:1
+ []
+
+<Images/53.png, id=712, 640.64343pt x 403.5075pt>
+File: Images/53.png Graphic file (type png)
+<use Images/53.png>
+Package pdftex.def Info: Images/53.png  used on input line 581.
+(pdftex.def)             Requested size: 271.04303pt x 170.71652pt.
+[25]
+<Images/54.png, id=717, 763.35187pt x 291.33844pt>
+File: Images/54.png Graphic file (type png)
+<use Images/54.png>
+Package pdftex.def Info: Images/54.png  used on input line 591.
+(pdftex.def)             Requested size: 341.43306pt x 130.30978pt.
+ [26 <./Images/53.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 599--602
+
+ []
+
+[27 <./Images/54.png>]
+<Images/4.png, id=728, 237.88875pt x 151.16475pt>
+File: Images/4.png Graphic file (type png)
+<use Images/4.png>
+Package pdftex.def Info: Images/4.png  used on input line 608.
+(pdftex.def)             Requested size: 133.21678pt x 84.65167pt.
+ [28 <./Images/4.png>]
+<Images/5.png, id=734, 311.36325pt x 151.767pt>
+File: Images/5.png Graphic file (type png)
+<use Images/5.png>
+Package pdftex.def Info: Images/5.png  used on input line 618.
+(pdftex.def)             Requested size: 174.36223pt x 84.98892pt.
+<Images/6.png, id=735, 298.11375pt x 168.63pt>
+File: Images/6.png Graphic file (type png)
+<use Images/6.png>
+Package pdftex.def Info: Images/6.png  used on input line 628.
+(pdftex.def)             Requested size: 166.94255pt x 94.43214pt.
+<Images/7.png, id=736, 254.1495pt x 150.5625pt>
+File: Images/7.png Graphic file (type png)
+<use Images/7.png>
+Package pdftex.def Info: Images/7.png  used on input line 638.
+(pdftex.def)             Requested size: 142.32274pt x 84.3144pt.
+ [29 <./Images/5.png> <./Images/6.png>]
+<Images/8.png, id=743, 287.27325pt x 148.1535pt>
+File: Images/8.png Graphic file (type png)
+<use Images/8.png>
+Package pdftex.def Info: Images/8.png  used on input line 648.
+(pdftex.def)             Requested size: 160.87192pt x 82.9654pt.
+<Images/9.png, id=744, 269.20575pt x 163.20975pt>
+File: Images/9.png Graphic file (type png)
+<use Images/9.png>
+Package pdftex.def Info: Images/9.png  used on input line 660.
+(pdftex.def)             Requested size: 150.75418pt x 91.39682pt.
+ [30 <./Images/7.png> <./Images/8.png>]
+<Images/10.png, id=752, 308.95425pt x 374.5995pt>
+File: Images/10.png Graphic file (type png)
+<use Images/10.png>
+Package pdftex.def Info: Images/10.png  used on input line 670.
+(pdftex.def)             Requested size: 117.33311pt x 142.26378pt.
+<Images/11.png, id=753, 410.7345pt x 157.18726pt>
+File: Images/11.png Graphic file (type png)
+<use Images/11.png>
+Package pdftex.def Info: Images/11.png  used on input line 680.
+(pdftex.def)             Requested size: 230.00975pt x 88.02425pt.
+ [31 <./Images/9.png> <./Images/10.png>]
+<Images/12.png, id=760, 305.34074pt x 174.6525pt>
+File: Images/12.png Graphic file (type png)
+<use Images/12.png>
+Package pdftex.def Info: Images/12.png  used on input line 690.
+(pdftex.def)             Requested size: 170.98964pt x 97.80472pt.
+<Images/13.png, id=761, 127.07475pt x 189.70876pt>
+File: Images/13.png Graphic file (type png)
+<use Images/13.png>
+Package pdftex.def Info: Images/13.png  used on input line 700.
+(pdftex.def)             Requested size: 71.16136pt x 106.23616pt.
+ [32 <./Images/11.png> <./Images/12.png>]
+<Images/14.png, id=768, 211.992pt x 136.1085pt>
+File: Images/14.png Graphic file (type png)
+<use Images/14.png>
+Package pdftex.def Info: Images/14.png  used on input line 710.
+(pdftex.def)             Requested size: 118.71469pt x 76.22023pt.
+<Images/15.png, id=769, 245.11575pt x 109.6095pt>
+File: Images/15.png Graphic file (type png)
+<use Images/15.png>
+Package pdftex.def Info: Images/15.png  used on input line 721.
+(pdftex.def)             Requested size: 137.26387pt x 61.38087pt.
+ [33 <./Images/13.png> <./Images/14.png>]
+<Images/16.png, id=776, 272.81924pt x 161.403pt>
+File: Images/16.png Graphic file (type png)
+<use Images/16.png>
+Package pdftex.def Info: Images/16.png  used on input line 731.
+(pdftex.def)             Requested size: 152.77773pt x 90.38506pt.
+<Images/17.png, id=777, 281.25075pt x 141.52875pt>
+File: Images/17.png Graphic file (type png)
+<use Images/17.png>
+Package pdftex.def Info: Images/17.png  used on input line 741.
+(pdftex.def)             Requested size: 157.49933pt x 79.25555pt.
+ [34 <./Images/15.png> <./Images/16.png>] [35 <./Images/17.png>]
+Chapter 2.
+<Images/40.png, id=789, 702.625pt x 526.96875pt>
+File: Images/40.png Graphic file (type png)
+<use Images/40.png>
+Package pdftex.def Info: Images/40.png  used on input line 756.
+(pdftex.def)             Requested size: 269.35893pt x 202.01474pt.
+<Images/41.png, id=790, 702.625pt x 526.96875pt>
+File: Images/41.png Graphic file (type png)
+<use Images/41.png>
+Package pdftex.def Info: Images/41.png  used on input line 761.
+(pdftex.def)             Requested size: 269.35893pt x 202.01474pt.
+[36
+
+]
+<Images/42.png, id=796, 702.625pt x 526.96875pt>
+File: Images/42.png Graphic file (type png)
+<use Images/42.png>
+Package pdftex.def Info: Images/42.png  used on input line 766.
+(pdftex.def)             Requested size: 269.35893pt x 202.01474pt.
+ [37 <./Images/40.png> <./Images/41.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 772--777
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--785
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 787--792
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 770--793
+
+ []
+
+
+Overfull \hbox (41.61346pt too wide) in paragraph at lines 770--793
+[]$  $[]$
+ []
+
+<Images/37.png, id=801, 1161.33875pt x 744.7825pt>
+File: Images/37.png Graphic file (type png)
+<use Images/37.png>
+Package pdftex.def Info: Images/37.png  used on input line 799.
+(pdftex.def)             Requested size: 315.00102pt x 202.01474pt.
+
+Overfull \hbox (4.52101pt too wide) in paragraph at lines 796--801
+\OT1/cmr/m/n/12 A mag-netic sam-ple was take, from sub-strate side Ta(5)/MgO(0.
+8)/CoFeB(10).
+ []
+
+[38 <./Images/42.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 802--806
+
+ []
+
+<Images/46.png, id=806, 640.137pt x 389.82pt>
+File: Images/46.png Graphic file (type png)
+<use Images/46.png>
+Package pdftex.def Info: Images/46.png  used on input line 813.
+(pdftex.def)             Requested size: 358.47426pt x 218.29771pt.
+[39 <./Images/37.png>]
+<Images/47.png, id=812, 712.845pt x 417.852pt>
+File: Images/47.png Graphic file (type png)
+<use Images/47.png>
+Package pdftex.def Info: Images/47.png  used on input line 820.
+(pdftex.def)             Requested size: 399.19048pt x 233.99553pt.
+
+Overfull \hbox (9.19048pt too wide) in paragraph at lines 820--821
+ [][] 
+ []
+
+<Images/48.png, id=813, 625.245pt x 485.523pt>
+File: Images/48.png Graphic file (type png)
+<use Images/48.png>
+Package pdftex.def Info: Images/48.png  used on input line 827.
+(pdftex.def)             Requested size: 350.1348pt x 271.89102pt.
+[40 <./Images/46.png>]
+<Images/49.png, id=819, 523.9575pt x 208.98074pt>
+File: Images/49.png Graphic file (type png)
+<use Images/49.png>
+Package pdftex.def Info: Images/49.png  used on input line 835.
+(pdftex.def)             Requested size: 293.4142pt x 117.02841pt.
+ [41 <./Images/47.png> <./Images/48.png>]
+<Images/50.png, id=826, 448.67625pt x 143.3355pt>
+File: Images/50.png Graphic file (type png)
+<use Images/50.png>
+Package pdftex.def Info: Images/50.png  used on input line 844.
+(pdftex.def)             Requested size: 251.25699pt x 80.26732pt.
+<Images/51.png, id=827, 558.28575pt x 224.037pt>
+File: Images/51.png Graphic file (type png)
+<use Images/51.png>
+Package pdftex.def Info: Images/51.png  used on input line 853.
+(pdftex.def)             Requested size: 312.63788pt x 125.45985pt.
+ [42 <./Images/49.png> <./Images/50.png>]
+<Images/45.png, id=835, 843.90282pt x 296.60812pt>
+File: Images/45.png Graphic file (type png)
+<use Images/45.png>
+Package pdftex.def Info: Images/45.png  used on input line 862.
+(pdftex.def)             Requested size: 341.43306pt x 120.00342pt.
+ [43 <./Images/51.png> <./Images/45.png>] [44]
+<Images/44.png, id=846, 690.945pt x 460.557pt>
+File: Images/44.png Graphic file (type png)
+<use Images/44.png>
+Package pdftex.def Info: Images/44.png  used on input line 906.
+(pdftex.def)             Requested size: 386.92656pt x 257.91016pt.
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 915--922
+
+ []
+
+[46 <./Images/44.png>]
+Overfull \hbox (20.981pt too wide) in paragraph at lines 923--934
+ [] 
+ []
+
+<Images/43.png, id=856, 687.0468pt x 423.5022pt>
+File: Images/43.png Graphic file (type png)
+<use Images/43.png>
+Package pdftex.def Info: Images/43.png  used on input line 952.
+(pdftex.def)             Requested size: 384.74358pt x 237.15959pt.
+[47]
+<Images/Amazon/LF100Hz.png, id=861, 851.43094pt x 463.7325pt>
+File: Images/Amazon/LF100Hz.png Graphic file (type png)
+<use Images/Amazon/LF100Hz.png>
+Package pdftex.def Info: Images/Amazon/LF100Hz.png  used on input line 965.
+(pdftex.def)             Requested size: 190.63338pt x 103.82584pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 965--971
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 965--971
+
+ []
+
+<Images/Amazon/LF1kHz.png, id=862, 854.44218pt x 469.00218pt>
+File: Images/Amazon/LF1kHz.png Graphic file (type png)
+<use Images/Amazon/LF1kHz.png>
+Package pdftex.def Info: Images/Amazon/LF1kHz.png  used on input line 975.
+(pdftex.def)             Requested size: 190.63338pt x 104.63354pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 975--981
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 975--981
+
+ []
+
+<Images/Amazon/LF100kHz.png, id=863, 846.91406pt x 464.4853pt>
+File: Images/Amazon/LF100kHz.png Graphic file (type png)
+<use Images/Amazon/LF100kHz.png>
+Package pdftex.def Info: Images/Amazon/LF100kHz.png  used on input line 985.
+(pdftex.def)             Requested size: 190.63338pt x 104.54721pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 985--991
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 985--991
+
+ []
+
+<Images/Amazon/LF1MHz.png, id=864, 851.43094pt x 463.7325pt>
+File: Images/Amazon/LF1MHz.png Graphic file (type png)
+<use Images/Amazon/LF1MHz.png>
+Package pdftex.def Info: Images/Amazon/LF1MHz.png  used on input line 995.
+(pdftex.def)             Requested size: 190.63338pt x 103.82584pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 995--1001
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--1001
+
+ []
+
+<Images/Infinion/RF1MHz.png, id=865, 852.18375pt x 462.97969pt>
+File: Images/Infinion/RF1MHz.png Graphic file (type png)
+<use Images/Infinion/RF1MHz.png>
+Package pdftex.def Info: Images/Infinion/RF1MHz.png  used on input line 1007.
+(pdftex.def)             Requested size: 190.63338pt x 103.56544pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 1007--1013
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1013
+
+ []
+
+<Images/Infinion/RF5MHz.png, id=866, 852.18375pt x 464.4853pt>
+File: Images/Infinion/RF5MHz.png Graphic file (type png)
+<use Images/Infinion/RF5MHz.png>
+Package pdftex.def Info: Images/Infinion/RF5MHz.png  used on input line 1017.
+(pdftex.def)             Requested size: 190.63338pt x 103.90225pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 1017--1023
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1023
+
+ []
+
+<Images/Infinion/RF10MHz.png, id=867, 851.43094pt x 464.4853pt>
+File: Images/Infinion/RF10MHz.png Graphic file (type png)
+<use Images/Infinion/RF10MHz.png>
+Package pdftex.def Info: Images/Infinion/RF10MHz.png  used on input line 1027.
+(pdftex.def)             Requested size: 190.63338pt x 103.99438pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 1027--1033
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1033
+
+ []
+
+<Images/Infinion/RF20MHz.png, id=868, 849.92531pt x 465.99094pt>
+File: Images/Infinion/RF20MHz.png Graphic file (type png)
+<use Images/Infinion/RF20MHz.png>
+Package pdftex.def Info: Images/Infinion/RF20MHz.png  used on input line 1037.
+(pdftex.def)             Requested size: 190.63338pt x 104.51634pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 1037--1043
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1043
+
+ []
+
+<Images/Infinion/RF50MHz.png, id=869, 851.43094pt x 465.99094pt>
+File: Images/Infinion/RF50MHz.png Graphic file (type png)
+<use Images/Infinion/RF50MHz.png>
+Package pdftex.def Info: Images/Infinion/RF50MHz.png  used on input line 1047.
+(pdftex.def)             Requested size: 190.63338pt x 104.33148pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 1047--1053
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1047--1053
+
+ []
+
+<Images/Infinion/RF100MHz.png, id=870, 850.67813pt x 463.7325pt>
+File: Images/Infinion/RF100MHz.png Graphic file (type png)
+<use Images/Infinion/RF100MHz.png>
+Package pdftex.def Info: Images/Infinion/RF100MHz.png  used on input line 1057.
+
+(pdftex.def)             Requested size: 190.63338pt x 103.91782pt.
+
+Overfull \hbox (3.43504pt too wide) in paragraph at lines 1057--1063
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1057--1063
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--1064
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--1064
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--1064
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--1064
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 957--1064
+
+ []
+
+[48 <./Images/43.png>] [49 <./Images/Amazon/LF100Hz.png> <./Images/Amazon/LF1kH
+z.png> <./Images/Amazon/LF100kHz.png> <./Images/Amazon/LF1MHz.png>] [50 <./Imag
+es/Infinion/RF1MHz.png> <./Images/Infinion/RF5MHz.png> <./Images/Infinion/RF10M
+Hz.png> <./Images/Infinion/RF20MHz.png>]
+<Images/52.png, id=893, 1324.19719pt x 468.24937pt>
+File: Images/52.png Graphic file (type png)
+<use Images/52.png>
+Package pdftex.def Info: Images/52.png  used on input line 1086.
+(pdftex.def)             Requested size: 369.88582pt x 130.79454pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1089
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1089
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1089
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1089
+
+ []
+
+
+Overfull \hbox (2.68904pt too wide) in paragraph at lines 1065--1089
+\OT1/cmr/m/n/12 Kapton/PMN-PT(50)/FeGa(2)/MgO(0.8)/CoFeB(2)/Ta(5)/Ru(5)/Cr or A
+u 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1089
+
+ []
+
+[51 <./Images/Infinion/RF50MHz.png> <./Images/Infinion/RF100MHz.png>] [52 <./Im
+ages/52.png>] [53]
+<Images/56.png, id=909, 683.55376pt x 161.85469pt>
+File: Images/56.png Graphic file (type png)
+<use Images/56.png>
+Package pdftex.def Info: Images/56.png  used on input line 1117.
+(pdftex.def)             Requested size: 369.88582pt x 87.58545pt.
+ [54 <./Images/56.png>]
+<Images/57.png, id=917, 1039.63406pt x 274.02374pt>
+File: Images/57.png Graphic file (type png)
+<use Images/57.png>
+Package pdftex.def Info: Images/57.png  used on input line 1126.
+(pdftex.def)             Requested size: 369.88582pt x 97.49025pt.
+ [55 <./Images/57.png>]
+Chapter 3.
+
+Overfull \hbox (34.78865pt too wide) in paragraph at lines 1133--1140
+\OT1/cmr/m/n/12 By im-ple-ment-ing the neu-ro-mor-phic hard-ware de-sign, an en
+ergy-efficient application-
+ []
+
+[56
+
+] [57
+
+
+] (Thesis.bbl [58] [59
+
+]
+Underfull \hbox (badness 1577) in paragraph at lines 66--70
+[]\OT1/cmr/m/n/12 News.  Switch-ing up spin.  \OT1/cmr/m/it/12 Na-ture\OT1/cmr/
+m/n/12 , 476(375), Aug. 25, 2011.
+ []
+
+[60])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1160.
+ [61]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1160.
+ (Thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1160.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1160.
+
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: DDB8A2E865181B04173D9777173BD5A4;5455.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1160.
+ ) 
+Here is how much of TeX's memory you used:
+ 8329 strings out of 492895
+ 128015 string characters out of 3125136
+ 211152 words of memory out of 3000000
+ 11883 multiletter control sequences out of 15000+200000
+ 11970 words of font info for 44 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,9n,39p,959b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{cite.khr126} has been referenced but does not exi
+st, replaced by a fixed one
+
+<C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/HP/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/HP/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/HP/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/HP
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
+Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb>
+Output written on Thesis.pdf (74 pages, 6102541 bytes).
+PDF statistics:
+ 1035 PDF objects out of 1200 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 875 words of extra memory for PDF output out of 10000 (max. 10000000)
+

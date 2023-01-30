@@ -1,0 +1,64 @@
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces An ANN with one neuron in input layer, two neurons in the hidden layer, and two neurons in the output layer.\relax }}{3}{figure.caption.10}% 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces A simple neural network to depict forward propagation.\relax }}{5}{figure.caption.11}% 
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Step size is larger when far away from minima and small step size when close to the minima.\relax }}{6}{figure.caption.12}% 
+\contentsline {figure}{\numberline {1.4}{\ignorespaces A simple neural network to depict backpropagation.\relax }}{7}{figure.caption.13}% 
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Optimizing the neural architecture using testing and training error.\relax }}{10}{figure.caption.14}% 
+\contentsline {figure}{\numberline {1.6}{\ignorespaces An elliptical cylinder with thickness in x-direction, major-axis in z-direction, and minor axis in y-direction.\relax }}{13}{figure.caption.15}% 
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Magnetic anisotropy for different value of $\theta $ when magnetic field is applied along in-plane hard axis.\relax }}{13}{figure.caption.16}% 
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Magnetic anisotropy for different value of $\theta $ when magnetic field is applied along in-plane easy axis.\relax }}{15}{figure.caption.17}% 
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Magnetization is perpendicular to the planar surface in PMA.\relax }}{16}{figure.caption.18}% 
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Two types of PMA: a. Bulk anisotropy b. Interface anisotropy.\relax }}{16}{figure.caption.19}% 
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Magnetostriction elongation as a function of applied magnetic field.\relax }}{18}{figure.caption.20}% 
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Electric, elastic, and magnetic properties of multiferroics.\relax }}{19}{figure.caption.21}% 
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Giant magnetoresistance with Cr layer sandwiched between Fe layer\nobreakspace {}\cite {baibich1988giant, binasch1989enhanced}.\relax }}{20}{figure.caption.22}% 
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Parallel and anti-parallel orientation in a TMR.\relax }}{21}{figure.caption.23}% 
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Experimental system of magnetic thermal annealing.\relax }}{23}{figure.caption.24}% 
+\contentsline {figure}{\numberline {1.16}{\ignorespaces The precessing magnetization vector the magnetic sample under the applied magnetic field.\relax }}{24}{figure.caption.25}% 
+\contentsline {figure}{\numberline {1.17}{\ignorespaces FMR absorption given by the imaginary part of the lorentzian.\relax }}{26}{figure.caption.26}% 
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Derivative FMR signal plotted against magnetic field\nobreakspace {}\cite {RefWorks:161}.\relax }}{26}{figure.caption.27}% 
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Schematic view of the working principle of atomic force microscopy.\relax }}{28}{figure.caption.28}% 
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Schematic view of the working principle of vibrating sample magnetometer.\relax }}{29}{figure.caption.29}% 
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Schematic view of the working principle of X-ray diffraction.\relax }}{30}{figure.caption.30}% 
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Reflection and refraction of X-ray beams with change in incident angle $\theta _i$.\relax }}{31}{figure.caption.31}% 
+\contentsline {figure}{\numberline {1.23}{\ignorespaces XRR curve for thickness measurement of MgO/CoFeB sample, measured at UGC-CSR-DAE Indore.\relax }}{31}{figure.caption.32}% 
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Signal generator: R\&S SMB100A\relax }}{32}{figure.caption.33}% 
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Power Supply: R\&S NGL202\relax }}{32}{figure.caption.34}% 
+\contentsline {figure}{\numberline {1.26}{\ignorespaces Spectrum analyzer: R\&S Spectrum rider FPH\relax }}{33}{figure.caption.35}% 
+\contentsline {figure}{\numberline {1.27}{\ignorespaces Source Measuring Unit (SMU): Keithly 2450\relax }}{33}{figure.caption.36}% 
+\contentsline {figure}{\numberline {1.28}{\ignorespaces Lock-in amplifier: SRS SR830\relax }}{34}{figure.caption.37}% 
+\contentsline {figure}{\numberline {1.29}{\ignorespaces Probe station\relax }}{34}{figure.caption.38}% 
+\contentsline {figure}{\numberline {1.30}{\ignorespaces Oscilloscope: R\&S RTM3002\relax }}{35}{figure.caption.39}% 
+\contentsline {figure}{\numberline {1.31}{\ignorespaces Spin Coater: Holmarc HO-TH-05\relax }}{36}{figure.caption.40}% 
+\contentsline {figure}{\numberline {1.32}{\ignorespaces Shaker: Remi RS-12R\relax }}{36}{figure.caption.41}% 
+\contentsline {figure}{\numberline {1.33}{\ignorespaces Hot plate: Neuation iStir HP550\relax }}{37}{figure.caption.42}% 
+\contentsline {figure}{\numberline {1.34}{\ignorespaces Ultrasonic cleaner: Athena UAC\relax }}{37}{figure.caption.43}% 
+\contentsline {figure}{\numberline {1.35}{\ignorespaces Hot air oven\relax }}{38}{figure.caption.44}% 
+\contentsline {figure}{\numberline {1.36}{\ignorespaces Rota Mantle\relax }}{38}{figure.caption.45}% 
+\contentsline {figure}{\numberline {1.37}{\ignorespaces Nitrogen Gun\relax }}{39}{figure.caption.46}% 
+\contentsline {figure}{\numberline {1.38}{\ignorespaces Vacuum Desiccator\relax }}{39}{figure.caption.47}% 
+\contentsline {figure}{\numberline {1.39}{\ignorespaces Muffle furnace: Ridhi RVSW-151\relax }}{40}{figure.caption.48}% 
+\contentsline {figure}{\numberline {1.40}{\ignorespaces Fume hood\relax }}{40}{figure.caption.49}% 
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Optimizing first hidden layer\relax }}{43}{figure.caption.50}% 
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Optimizing second hidden layer\relax }}{43}{figure.caption.51}% 
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Optimizing third hidden layer\relax }}{44}{figure.caption.52}% 
+\contentsline {figure}{\numberline {2.4}{\ignorespaces VSM results of before and after MTA of MgO/CoFeB 10nm sample.\relax }}{45}{figure.caption.53}% 
+\contentsline {figure}{\numberline {2.5}{\ignorespaces LabVIEW automation of power supply R\&S NGL202.\relax }}{46}{figure.caption.54}% 
+\contentsline {figure}{\numberline {2.6}{\ignorespaces VI automation of diode using power supply.\relax }}{46}{figure.caption.55}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces VI automation of resistance using power supply.\relax }}{47}{figure.caption.56}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces VI automation of transistor using power supply.\relax }}{47}{figure.caption.57}% 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces LabVIEW: Electromagnet automation\relax }}{48}{figure.caption.58}% 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces LabVIEW: Signal generator automation\relax }}{48}{figure.caption.59}% 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces LabVIEW: Spectrum analyzer automation\relax }}{49}{figure.caption.60}% 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces LabVIEW: Lock-in amplifier automation\relax }}{49}{figure.caption.61}% 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Experimental system for ferromagnetic resonance.\relax }}{50}{figure.caption.62}% 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Schematic of the ferromagnetic resonance system.\relax }}{50}{figure.caption.63}% 
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Characteristics impedance of coaxial cable.\relax }}{52}{figure.caption.64}% 
+\contentsline {figure}{\numberline {2.16}{\ignorespaces FMR absorption of a magnetic hard disk sample.\relax }}{54}{figure.caption.65}% 
+\contentsline {figure}{\numberline {2.17}{\ignorespaces EBL patterns on $3\text { mm} \times 1.5$ mm Si substrate.\relax }}{58}{figure.caption.66}% 
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Circular and elliptical EBL patterns.\relax }}{58}{figure.caption.67}% 
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Sputtering deposition of thin-films.\relax }}{60}{figure.caption.68}% 
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Hardware architecture of a single neuron.\relax }}{61}{figure.caption.69}% 
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Neuromorphic hardware architecture of a full neural network.\relax }}{62}{figure.caption.70}% 
+\addvspace {10pt}
